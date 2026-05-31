@@ -9,19 +9,19 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;800&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
   
-  <style>
+      <style>
     :root {
-      --bg-dark: #040508;
-      --bg-slate: #0a0b12;
-      --primary: #8b5cf6;
-      --primary-glow: rgba(139, 92, 246, 0.4);
-      --secondary: #06b6d4;
-      --secondary-glow: rgba(6, 182, 212, 0.4);
-      --accent: #f43f5e;
-      --text-main: #f8fafc;
-      --text-muted: #94a3b8;
-      --glass-bg: rgba(10, 11, 18, 0.88);
-      --glass-border: rgba(255, 255, 255, 0.08);
+      --bg-dark: #f0f9ff;          /* 晴空淺藍 */
+      --bg-slate: #e0f2fe;         /* 柔軟雲朵藍 */
+      --primary: #0284c7;          /* 天空藍主色 */
+      --primary-glow: rgba(14, 165, 233, 0.18);
+      --secondary: #0d9488;        /* 深海綠 (次要色) */
+      --secondary-glow: rgba(13, 148, 136, 0.18);
+      --accent: #e11d48;           /* 玫瑰紅 (強烈對比色) */
+      --text-main: #0f172a;        /* 石板深灰 (主字體高對比) */
+      --text-muted: #475569;       /* 灰藍色 (說明性文字) */
+      --glass-bg: rgba(255, 255, 255, 0.78); /* 高透光度珍珠玻璃 */
+      --glass-border: rgba(14, 165, 233, 0.16); /* 天空藍微光邊框 */
       --font-outfit: 'Outfit', 'Noto Sans TC', sans-serif;
       --font-inter: 'Inter', 'Noto Sans TC', sans-serif;
     }
@@ -34,6 +34,7 @@
 
     body {
       background-color: var(--bg-dark);
+      background-image: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 50%, #f0f9ff 100%);
       color: var(--text-main);
       font-family: var(--font-inter);
       overflow: hidden;
@@ -57,7 +58,7 @@
       position: absolute;
       border-radius: 50%;
       filter: blur(140px);
-      opacity: 0.12;
+      opacity: 0.45;
       animation: float 25s infinite alternate ease-in-out;
     }
 
@@ -66,7 +67,7 @@
       left: -10%;
       width: 65vw;
       height: 65vw;
-      background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
+      background: radial-gradient(circle, #38bdf8 0%, transparent 70%);
       animation-delay: 0s;
     }
 
@@ -75,7 +76,7 @@
       right: -10%;
       width: 55vw;
       height: 55vw;
-      background: radial-gradient(circle, var(--secondary) 0%, transparent 70%);
+      background: radial-gradient(circle, #22d3ee 0%, transparent 70%);
       animation-delay: -6s;
     }
 
@@ -108,7 +109,7 @@
       font-family: var(--font-outfit);
       font-weight: 800;
       font-size: 1.4rem;
-      background: linear-gradient(135deg, #fff 0%, var(--text-muted) 100%);
+      background: linear-gradient(135deg, #0f172a 0%, var(--primary) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       letter-spacing: -0.5px;
@@ -124,18 +125,19 @@
       height: 10px;
       background: var(--primary);
       border-radius: 50%;
-      box-shadow: 0 0 10px var(--primary);
+      box-shadow: 0 0 10px var(--primary-glow);
     }
 
     /* Top Section Tab Selectors */
     .part-tabs {
       display: flex;
       gap: 0.5rem;
-      background: rgba(255,255,255,0.02);
+      background: rgba(255,255,255,0.4);
       border: 1px solid var(--glass-border);
       padding: 0.3rem;
       border-radius: 99px;
       backdrop-filter: blur(10px);
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.03);
     }
 
     .part-tab {
@@ -151,10 +153,10 @@
     }
 
     .part-tab.active {
-      background: var(--primary-glow);
+      background: var(--primary);
       color: #fff;
-      border: 1px solid rgba(139, 92, 246, 0.2);
-      box-shadow: 0 0 10px rgba(139, 92, 246, 0.15);
+      border: 1px solid var(--primary);
+      box-shadow: 0 4px 10px rgba(2, 132, 199, 0.25);
     }
 
     /* Slides Container */
@@ -206,7 +208,7 @@
       max-height: 680px;
       padding: 3rem;
       backdrop-filter: blur(25px);
-      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255,255,255,0.05);
+      box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08), inset 0 1px 0 rgba(255,255,255,0.6);
       display: grid;
       grid-template-columns: 1fr;
       align-content: center;
@@ -237,7 +239,7 @@
       background: transparent;
     }
     .slide-left::-webkit-scrollbar-thumb {
-      background: rgba(255, 255, 255, 0.08);
+      background: rgba(14, 165, 233, 0.15);
       border-radius: 10px;
     }
     .slide-left::-webkit-scrollbar-thumb:hover {
@@ -279,7 +281,7 @@
       font-size: 2.35rem;
       line-height: 1.3;
       margin-bottom: 1.2rem;
-      background: linear-gradient(to right, #ffffff, #e2e8f0);
+      background: linear-gradient(to right, #0f172a, #334155);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
@@ -307,10 +309,10 @@
       font-size: 4.8rem;
       line-height: 1.1;
       margin-bottom: 1.2rem;
-      background: linear-gradient(135deg, #ffffff 10%, #c084fc 50%, #22d3ee 100%);
+      background: linear-gradient(135deg, #0f172a 10%, #0284c7 50%, #0d9488 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      filter: drop-shadow(0 0 30px rgba(139, 92, 246, 0.25));
+      filter: drop-shadow(0 4px 20px rgba(14, 165, 233, 0.12));
     }
 
     .cover-subtitle {
@@ -327,8 +329,8 @@
       color: var(--primary);
       font-weight: 600;
       letter-spacing: 2px;
-      background: rgba(139, 92, 246, 0.08);
-      border: 1px solid rgba(139, 92, 246, 0.15);
+      background: rgba(14, 165, 233, 0.08);
+      border: 1px solid rgba(14, 165, 233, 0.18);
       padding: 0.5rem 1.8rem;
       border-radius: 99px;
       margin-bottom: 1rem;
@@ -353,17 +355,18 @@
       display: flex;
       gap: 1.1rem;
       align-items: flex-start;
-      background: rgba(255, 255, 255, 0.015);
-      border: 1px solid rgba(255, 255, 255, 0.03);
+      background: rgba(255, 255, 255, 0.4);
+      border: 1px solid rgba(14, 165, 233, 0.08);
       padding: 1rem;
       border-radius: 14px;
       transition: all 0.3s ease;
     }
 
     .feature-item:hover {
-      background: rgba(255, 255, 255, 0.04);
-      border-color: rgba(139, 92, 246, 0.2);
+      background: rgba(255, 255, 255, 0.85);
+      border-color: rgba(14, 165, 233, 0.25);
       transform: translateX(5px);
+      box-shadow: 0 6px 15px rgba(14, 165, 233, 0.05);
     }
 
     .feature-icon {
@@ -377,14 +380,14 @@
       justify-content: center;
       font-size: 1.1rem;
       flex-shrink: 0;
-      box-shadow: 0 0 15px var(--primary-glow);
+      box-shadow: 0 0 10px var(--primary-glow);
     }
 
     .feature-text h4 {
       font-size: 1.05rem;
       font-weight: 600;
       margin-bottom: 0.25rem;
-      color: #fff;
+      color: var(--text-main);
     }
 
     .feature-text p {
@@ -397,7 +400,7 @@
     .value-balance-box {
       width: 100%;
       height: 100%;
-      background: rgba(255, 255, 255, 0.015);
+      background: rgba(255, 255, 255, 0.3);
       border: 1px solid var(--glass-border);
       border-radius: 24px;
       padding: 2rem;
@@ -405,6 +408,7 @@
       flex-direction: column;
       gap: 1.2rem;
       justify-content: center;
+      box-shadow: 0 8px 25px rgba(15, 23, 42, 0.02);
     }
 
     .value-card {
@@ -414,22 +418,24 @@
       overflow: hidden;
       border: 1px solid transparent;
       transition: all 0.3s ease;
+      background: rgba(255, 255, 255, 0.6);
     }
 
     .value-card.subjective {
-      background: linear-gradient(135deg, rgba(244, 63, 94, 0.04) 0%, rgba(8, 9, 15, 0) 100%);
-      border-color: rgba(244, 63, 94, 0.12);
+      background: linear-gradient(135deg, rgba(225, 29, 72, 0.03) 0%, rgba(255, 255, 255, 0.8) 100%);
+      border-color: rgba(225, 29, 72, 0.12);
     }
 
     .value-card.objective {
-      background: linear-gradient(135deg, rgba(6, 182, 212, 0.04) 0%, rgba(8, 9, 15, 0) 100%);
-      border-color: rgba(6, 182, 212, 0.18);
-      box-shadow: 0 10px 30px rgba(6, 182, 212, 0.03);
+      background: linear-gradient(135deg, rgba(14, 165, 233, 0.03) 0%, rgba(255, 255, 255, 0.8) 100%);
+      border-color: rgba(14, 165, 233, 0.15);
+      box-shadow: 0 6px 18px rgba(14, 165, 233, 0.02);
     }
 
     .value-card.objective:hover {
-      border-color: var(--secondary);
+      border-color: var(--primary);
       transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(14, 165, 233, 0.06);
     }
 
     .value-card h3 {
@@ -441,7 +447,7 @@
     }
 
     .value-card.subjective h3 { color: var(--accent); }
-    .value-card.objective h3 { color: var(--secondary); }
+    .value-card.objective h3 { color: var(--primary); }
 
     .value-card p {
       font-size: 0.88rem;
@@ -453,7 +459,7 @@
       margin-top: 0.5rem;
       font-style: italic;
       font-size: 0.82rem;
-      color: #fff;
+      color: var(--text-main);
       border-left: 2px solid var(--secondary);
       padding-left: 0.6rem;
     }
@@ -469,7 +475,7 @@
     }
 
     .matrix-cell {
-      background: rgba(255,255,255,0.015);
+      background: rgba(255,255,255,0.4);
       border: 1px solid var(--glass-border);
       border-radius: 16px;
       padding: 1.1rem;
@@ -480,18 +486,19 @@
     }
 
     .matrix-cell.active-best {
-      background: linear-gradient(135deg, rgba(139, 92, 246, 0.08) 0%, rgba(8, 9, 15, 0) 100%);
-      border-color: rgba(139, 92, 246, 0.25);
-      box-shadow: 0 10px 25px rgba(139, 92, 246, 0.08);
+      background: linear-gradient(135deg, rgba(14, 165, 233, 0.06) 0%, rgba(255, 255, 255, 0.8) 100%);
+      border-color: rgba(14, 165, 233, 0.25);
+      box-shadow: 0 10px 25px rgba(14, 165, 233, 0.06);
     }
 
     .matrix-cell.active-worst {
-      background: linear-gradient(135deg, rgba(244, 63, 94, 0.08) 0%, rgba(8, 9, 15, 0) 100%);
-      border-color: rgba(244, 63, 94, 0.18);
+      background: linear-gradient(135deg, rgba(225, 29, 72, 0.05) 0%, rgba(255, 255, 255, 0.8) 100%);
+      border-color: rgba(225, 29, 72, 0.15);
     }
 
     .matrix-cell:hover {
       transform: scale(1.02);
+      background: rgba(255, 255, 255, 0.8);
     }
 
     .matrix-tag {
@@ -509,7 +516,7 @@
     .matrix-title {
       font-size: 1.1rem;
       font-weight: 600;
-      color: #fff;
+      color: var(--text-main);
       margin-bottom: 0.25rem;
     }
 
@@ -534,7 +541,7 @@
       width: 4px;
     }
     .timeline::-webkit-scrollbar-thumb {
-      background: rgba(255,255,255,0.05);
+      background: rgba(14, 165, 233, 0.15);
       border-radius: 2px;
     }
 
@@ -551,7 +558,7 @@
       top: 32px;
       bottom: -16px;
       width: 2px;
-      background: rgba(255, 255, 255, 0.04);
+      background: rgba(14, 165, 233, 0.08);
     }
 
     .timeline-node:last-child::before {
@@ -562,7 +569,7 @@
       width: 32px;
       height: 32px;
       border-radius: 50%;
-      background: var(--bg-slate);
+      background: #fff;
       border: 2px solid var(--text-muted);
       display: flex;
       align-items: center;
@@ -573,18 +580,19 @@
       flex-shrink: 0;
       z-index: 2;
       transition: all 0.3s ease;
+      box-shadow: 0 3px 6px rgba(15, 23, 42, 0.04);
     }
 
     .timeline-node.active .timeline-marker {
       border-color: var(--secondary);
-      background: var(--secondary-glow);
-      color: #fff;
+      background: #f0fdfa;
+      color: var(--secondary);
       box-shadow: 0 0 12px var(--secondary-glow);
     }
 
     .timeline-content {
-      background: rgba(255, 255, 255, 0.01);
-      border: 1px solid rgba(255, 255, 255, 0.02);
+      background: rgba(255, 255, 255, 0.5);
+      border: 1px solid rgba(14, 165, 233, 0.06);
       border-radius: 12px;
       padding: 0.8rem 1.2rem;
       width: 100%;
@@ -592,15 +600,15 @@
     }
 
     .timeline-node.active .timeline-content {
-      background: rgba(6, 182, 212, 0.02);
-      border-color: rgba(6, 182, 212, 0.12);
+      background: rgba(13, 148, 136, 0.03);
+      border-color: rgba(13, 148, 136, 0.15);
     }
 
     .timeline-content h4 {
       font-size: 0.98rem;
       font-weight: 600;
       margin-bottom: 0.15rem;
-      color: #fff;
+      color: var(--text-main);
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -633,7 +641,7 @@
       width: 250px;
       height: 250px;
       border-radius: 50%;
-      border: 2px dashed rgba(255,255,255,0.06);
+      border: 2px dashed rgba(14, 165, 233, 0.15);
       position: relative;
       display: flex;
       align-items: center;
@@ -658,7 +666,7 @@
       flex-direction: column;
       z-index: 5;
       animation: counter-rotate 45s infinite linear;
-      box-shadow: 0 0 30px var(--primary-glow);
+      box-shadow: 0 8px 25px var(--primary-glow);
     }
 
     @keyframes counter-rotate {
@@ -670,7 +678,7 @@
       font-size: 1.25rem;
       font-weight: 800;
       font-family: var(--font-outfit);
-      background: linear-gradient(to right, #fff, var(--primary));
+      background: linear-gradient(to right, #0f172a, var(--primary));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
@@ -678,13 +686,14 @@
     .destiny-node {
       position: absolute;
       padding: 0.5rem 1.1rem;
-      background: var(--bg-slate);
+      background: rgba(255, 255, 255, 0.95);
       border: 1px solid var(--glass-border);
       border-radius: 12px;
       font-size: 0.85rem;
       font-weight: 600;
       white-space: nowrap;
       animation: counter-rotate 45s infinite linear;
+      box-shadow: 0 4px 10px rgba(15, 23, 42, 0.02);
     }
 
     .node-top { top: -20px; border-color: var(--secondary); color: var(--secondary); }
@@ -710,7 +719,7 @@
 
     .progress-bar-container {
       height: 4px;
-      background: rgba(255, 255, 255, 0.04);
+      background: rgba(14, 165, 233, 0.08);
       border-radius: 2px;
       flex-grow: 1;
       overflow: hidden;
@@ -741,7 +750,7 @@
     .btn-nav {
       background: var(--glass-bg);
       border: 1px solid var(--glass-border);
-      color: #fff;
+      color: var(--text-main);
       width: 42px;
       height: 42px;
       border-radius: 50%;
@@ -752,12 +761,14 @@
       font-size: 1rem;
       transition: all 0.3s ease;
       backdrop-filter: blur(10px);
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
     }
 
     .btn-nav:hover {
       border-color: var(--primary);
-      background: rgba(139, 92, 246, 0.15);
-      box-shadow: 0 0 15px rgba(139, 92, 246, 0.2);
+      color: var(--primary);
+      background: rgba(14, 165, 233, 0.06);
+      box-shadow: 0 4px 12px rgba(2, 132, 199, 0.15);
       transform: translateY(-2px);
     }
 
@@ -780,11 +791,13 @@
       gap: 0.5rem;
       transition: all 0.3s ease;
       backdrop-filter: blur(10px);
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.02);
     }
 
     .drawer-btn:hover {
-      color: #fff;
-      border-color: rgba(255,255,255,0.15);
+      color: var(--primary);
+      border-color: var(--primary);
+      background: rgba(14, 165, 233, 0.04);
     }
 
     .drawer {
@@ -793,7 +806,7 @@
       left: -330px;
       width: 330px;
       height: 100%;
-      background: var(--bg-slate);
+      background: rgba(255, 255, 255, 0.97);
       border-right: 1px solid var(--glass-border);
       z-index: 100;
       padding: 2.5rem 1.5rem;
@@ -801,7 +814,7 @@
       flex-direction: column;
       gap: 1.5rem;
       transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-      box-shadow: 20px 0 50px rgba(0,0,0,0.6);
+      box-shadow: 15px 0 45px rgba(15, 23, 42, 0.06);
     }
 
     .drawer.open {
@@ -812,7 +825,7 @@
       font-family: var(--font-outfit);
       font-weight: 700;
       font-size: 1.15rem;
-      color: #fff;
+      color: var(--text-main);
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -825,7 +838,7 @@
       transition: color 0.3s ease;
     }
 
-    .drawer-close:hover { color: #fff; }
+    .drawer-close:hover { color: var(--accent); }
 
     .drawer-list {
       display: flex;
@@ -840,7 +853,7 @@
       width: 4px;
     }
     .drawer-list::-webkit-scrollbar-thumb {
-      background: rgba(255,255,255,0.05);
+      background: rgba(14, 165, 233, 0.15);
       border-radius: 2px;
     }
 
@@ -867,14 +880,15 @@
     }
 
     .drawer-item:hover {
-      color: #fff;
-      background: rgba(255, 255, 255, 0.02);
+      color: var(--primary);
+      background: rgba(14, 165, 233, 0.04);
     }
 
     .drawer-item.active {
-      color: #fff;
-      background: rgba(139, 92, 246, 0.06);
-      border-color: rgba(139, 92, 246, 0.15);
+      color: var(--primary);
+      font-weight: 600;
+      background: rgba(14, 165, 233, 0.08);
+      border-color: rgba(14, 165, 233, 0.18);
     }
 
     .drawer-overlay {
@@ -883,7 +897,7 @@
       left: 0;
       width: 100vw;
       height: 100vh;
-      background: rgba(0,0,0,0.5);
+      background: rgba(15, 23, 42, 0.25);
       backdrop-filter: blur(4px);
       z-index: 99;
       opacity: 0;
@@ -906,24 +920,24 @@
     }
 
     .key-badge {
-      background: rgba(255,255,255,0.05);
+      background: rgba(14, 165, 233, 0.04);
       border: 1px solid var(--glass-border);
       padding: 0.1rem 0.3rem;
       border-radius: 4px;
       font-size: 0.7rem;
       font-family: monospace;
-      color: #fff;
+      color: var(--text-main);
     }
 
     /* Quote block styling inside slide */
     .highlight-quote {
       border-left: 3px solid var(--primary);
       padding: 0.8rem 1.2rem;
-      background: rgba(139, 92, 246, 0.03);
+      background: rgba(14, 165, 233, 0.03);
       border-radius: 0 12px 12px 0;
       margin: 1.2rem 0;
       font-style: italic;
-      color: #e2e8f0;
+      color: var(--text-main);
       font-size: 0.92rem;
       line-height: 1.5;
     }
@@ -942,17 +956,18 @@
     <!-- Top Header -->
     <header>
       <div class="logo">從容而行</div>
-      <!-- Tab selectors for 4 parts -->
+      <!-- Tab selectors for 5 parts -->
       <div class="part-tabs">
         <button class="part-tab active" data-part="all">全部</button>
         <button class="part-tab" data-part="part1">開顯生命 (01-17)</button>
         <button class="part-tab" data-part="part2">了凡改命 (18-41)</button>
         <button class="part-tab" data-part="part3">品格美學 (42-49)</button>
-        <button class="part-tab" data-part="part4">結語 (50)</button>
+        <button class="part-tab" data-part="part4">讀者回響 (50-69)</button>
+        <button class="part-tab" data-part="part5">結語 (70)</button>
       </div>
       <button class="drawer-btn" id="openDrawerBtn">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-        全書 50 節目錄
+        全書 70 節目錄
       </button>
     </header>
 
@@ -992,7 +1007,7 @@
             <div class="value-balance-box">
               <div class="value-card objective">
                 <h3>開啟生命的無盡藏</h3>
-                <p style="line-height:1.6; color:#fff;">本書的出發點，便是旨在提供一服清涼劑，引導焦躁不安的現代人將視線收回，重溫古聖先賢的傳統智慧，探索那本自具足、源源不絕的生命幸福寶藏。</p>
+                <p style="line-height:1.6; color:var(--text-main);">本書的出發點，便是旨在提供一服清涼劑，引導焦躁不安的現代人將視線收回，重溫古聖先賢的傳統智慧，探索那本自具足、源源不絕的生命幸福寶藏。</p>
               </div>
             </div>
           </div>
@@ -1027,7 +1042,7 @@
             <div class="value-balance-box">
               <div class="value-card subjective">
                 <h3>物欲與焦慮的共生</h3>
-                <p style="line-height:1.6; color:#fff;">追求物欲的道路註定沒有終點。在無止境的「擁有—攀比—不滿足—繼續擁有」的跑步機上，人的靈魂必然永遠緊繃，快樂也就成了空中樓閣。</p>
+                <p style="line-height:1.6; color:var(--text-main);">追求物欲的道路註定沒有終點。在無止境的「擁有—攀比—不滿足—繼續擁有」的跑步機上，人的靈魂必然永遠緊繃，快樂也就成了空中樓閣。</p>
               </div>
             </div>
           </div>
@@ -1055,7 +1070,7 @@
             <div class="value-balance-box">
               <div class="value-card objective">
                 <h3>數據背後的心靈真相</h3>
-                <p style="line-height:1.6; color:#fff;">在一九七〇年代前，女性雖然拥有的社會資源和權力較少，但其精神世界更為穩定與知足。隨著她們被捲入功利、高競爭的世俗生產力體系，欲望增加而心靈防線失守，快樂指數自然不可挽回地下滑。這再次證明：<b>名利與外在的改善，絕非通往幸福的唯一門票</b>。</p>
+                <p style="line-height:1.6; color:var(--text-main);">在一九七〇年代前，女性雖然拥有的社會資源和權力較少，但其精神世界更為穩定與知足。隨著她們被捲入功利、高競爭的世俗生產力體系，欲望增加而心靈防線失守，快樂指數自然不可挽回地下滑。這再次證明：<b>名利與外在的改善，絕非通往幸福的唯一門票</b>。</p>
               </div>
             </div>
           </div>
@@ -1090,7 +1105,7 @@
             <div class="value-balance-box">
               <div class="value-card objective" style="border-color: var(--secondary);">
                 <h3>心安即是歸處</h3>
-                <p style="line-height:1.6; color:#fff; font-style:italic;">「此心安處是吾鄉。」</p>
+                <p style="line-height:1.6; color:var(--text-main); font-style:italic;">「此心安處是吾鄉。」</p>
                 <p style="line-height:1.6; color:var(--text-muted); margin-top:0.5rem;">修行的一切資糧與追求，最終皆是為了開顯「心無罣礙、大安大寧」的境界。安心是心靈的第一塊基石，也是最後的港灣。</p>
               </div>
             </div>
@@ -1126,7 +1141,7 @@
             <div class="value-balance-box">
               <div class="value-card objective">
                 <h3>安心是幸福的真源</h3>
-                <p style="line-height:1.6; color:#fff;">如果沒有穩固的心靈底座，我們的一生都在為未來的安全感做抗爭。<b>唯有化解執著、樂於奉獻，才能讓安心不依賴外物，成為本心源源不絕的生命活水</b>。</p>
+                <p style="line-height:1.6; color:var(--text-main);">如果沒有穩固的心靈底座，我們的一生都在為未來的安全感做抗爭。<b>唯有化解執著、樂於奉獻，才能讓安心不依賴外物，成為本心源源不絕的生命活水</b>。</p>
               </div>
             </div>
           </div>
@@ -1161,7 +1176,7 @@
             <div class="value-balance-box">
               <div class="value-card subjective">
                 <h3>警告鐘聲的敲響</h3>
-                <p style="line-height:1.6; color:#fff;">憂鬱症從不挑選身份。不論是貧病交加的社會底層，或是名利雙收、人人豔羨的成功人士，皆有可能因內心枯竭而患上重鬱。這警示我們：**若忽視心靈品質的淨化，物質再繁榮也只是築在沙灘上的堡壘**。</p>
+                <p style="line-height:1.6; color:var(--text-main);">憂鬱症從不挑選身份。不論是貧病交加的社會底層，或是名利雙收、人人豔羨的成功人士，皆有可能因內心枯竭而患上重鬱。這警示我們：**若忽視心靈品質的淨化，物質再繁榮也只是築在沙灘上的堡壘**。</p>
               </div>
             </div>
           </div>
@@ -1196,7 +1211,7 @@
             <div class="value-balance-box">
               <div class="value-card objective">
                 <h3>才華與心靈的脫節</h3>
-                <p style="line-height:1.6; color:#fff;">這些悲劇直指現代教育的盲區：我們拼命培養出極具專業知識（才）的學子，卻從未教導他們如何安頓自己的心靈（德與智慧）。<b>當外在光環一旦受挫，心靈基底便如同沙雕般瞬間土崩瓦解</b>。這正是推動生命品德美學刻不容緩的原因。</p>
+                <p style="line-height:1.6; color:var(--text-main);">這些悲劇直指現代教育的盲區：我們拼命培養出極具專業知識（才）的學子，卻從未教導他們如何安頓自己的心靈（德與智慧）。<b>當外在光環一旦受挫，心靈基底便如同沙雕般瞬間土崩瓦解</b>。這正是推動生命品德美學刻不容緩的原因。</p>
               </div>
             </div>
           </div>
@@ -1231,7 +1246,7 @@
             <div class="value-balance-box">
               <div class="value-card subjective">
                 <h3>極易波動的心靈鐘擺</h3>
-                <p style="line-height:1.6; color:#fff;">由於主觀價值是建立在極其主觀且變幻無常的欲望之上，其內心必然像鐘擺一樣，隨外在得失境遇劇烈搖擺，永無真正泰然心安的一天。</p>
+                <p style="line-height:1.6; color:var(--text-main);">由於主觀價值是建立在極其主觀且變幻無常的欲望之上，其內心必然像鐘擺一樣，隨外在得失境遇劇烈搖擺，永無真正泰然心安的一天。</p>
               </div>
             </div>
           </div>
@@ -1266,7 +1281,7 @@
             <div class="value-balance-box">
               <div class="value-card subjective">
                 <h3>凡夫的無常掙扎</h3>
-                <p style="line-height:1.6; color:#fff;">正如雲谷禪師指點了凡：凡夫俗子正是因為心心念念落入分別執著，被自我私欲所牢牢束縛，才必然會被外界的命運、陰陽氣數和定數算得死死的，動彈不得。</p>
+                <p style="line-height:1.6; color:var(--text-main);">正如雲谷禪師指點了凡：凡夫俗子正是因為心心念念落入分別執著，被自我私欲所牢牢束縛，才必然會被外界的命運、陰陽氣數和定數算得死死的，動彈不得。</p>
               </div>
             </div>
           </div>
@@ -1301,7 +1316,7 @@
             <div class="value-balance-box">
               <div class="value-card objective">
                 <h3>與天地同其壽</h3>
-                <p style="line-height:1.6; color:#fff;">歷史上所有永垂不朽的聖賢英烈、精神導師，皆是因為徹底融化了主觀的小我執著，將一生奉獻於客觀利他的偉大事業中，因而活出了無量的大安心。</p>
+                <p style="line-height:1.6; color:var(--text-main);">歷史上所有永垂不朽的聖賢英烈、精神導師，皆是因為徹底融化了主觀的小我執著，將一生奉獻於客觀利他的偉大事業中，因而活出了無量的大安心。</p>
               </div>
             </div>
           </div>
@@ -1336,7 +1351,7 @@
             <div class="value-balance-box">
               <div class="value-card objective">
                 <h3>客觀價值的活見證</h3>
-                <p style="line-height:1.6; color:#fff; font-style:italic;">「生命不在於您擁有了多少，而是在於您給予了多少。」</p>
+                <p style="line-height:1.6; color:var(--text-main); font-style:italic;">「生命不在於您擁有了多少，而是在於您給予了多少。」</p>
                 <p style="line-height:1.6; color:var(--text-muted); margin-top:0.5rem;">德蕾莎修女不計較名利，全身心無私地投入利他服務。她沒有一絲物質私欲，卻贏得了全球至高無上的推崇，開顯了「客觀人生價值」的極致尊貴。</p>
               </div>
             </div>
@@ -1372,7 +1387,7 @@
             <div class="value-balance-box">
               <div class="value-card objective">
                 <h3>法施功德，至高無上</h3>
-                <p style="line-height:1.6; color:#fff;">給予他人金錢只能解一時之急，而啟迪他人智慧、助其心靈覺醒，則是徹底斬斷其痛苦之根源，給予其終生受用的大安心，其功德大於一切物質施捨。</p>
+                <p style="line-height:1.6; color:var(--text-main);">給予他人金錢只能解一時之急，而啟迪他人智慧、助其心靈覺醒，則是徹底斬斷其痛苦之根源，給予其終生受用的大安心，其功德大於一切物質施捨。</p>
               </div>
             </div>
           </div>
@@ -1407,7 +1422,7 @@
             <div class="value-balance-box">
               <div class="value-card objective">
                 <h3>行在紅塵中的慈悲</h3>
-                <p style="line-height:1.6; color:#fff; font-style:italic;">「無緣大慈，同體大悲。」</p>
+                <p style="line-height:1.6; color:var(--text-main); font-style:italic;">「無緣大慈，同體大悲。」</p>
                 <p style="line-height:1.6; color:var(--text-muted); margin-top:0.5rem;">將眾生的痛苦視為我切膚之痛。真誠行善、救人危急而不求名利回報，生命的尊貴與客觀價值就在這點點滴滴的善行中展露無遺。</p>
               </div>
             </div>
@@ -1443,7 +1458,7 @@
             <div class="value-balance-box">
               <div class="value-card subjective">
                 <h3>向外逐物的陷阱</h3>
-                <p style="line-height:1.6; color:#fff;">如果我們誤以為學歷越高、知道的冷門知識越多，生命就越有品質，那便大錯特錯。空有精明知識而沒有品德引導，只會讓人貪婪加劇，研發出危害生態與人類的大凶器。</p>
+                <p style="line-height:1.6; color:var(--text-main);">如果我們誤以為學歷越高、知道的冷門知識越多，生命就越有品質，那便大錯特錯。空有精明知識而沒有品德引導，只會讓人貪婪加劇，研發出危害生態與人類的大凶器。</p>
               </div>
             </div>
           </div>
@@ -1478,7 +1493,7 @@
             <div class="value-balance-box">
               <div class="value-card objective">
                 <h3>智慧自古至今未增未減</h3>
-                <p style="line-height:1.6; color:#fff;">向內排除自私私欲、化解傲慢妄心，直至內省洞澈，本具的圓滿大智慧就會如太陽當空般自然開顯。<b>智慧是解決煩惱的根本能力，而知識僅僅是工作的工具。</b></p>
+                <p style="line-height:1.6; color:var(--text-main);">向內排除自私私欲、化解傲慢妄心，直至內省洞澈，本具的圓滿大智慧就會如太陽當空般自然開顯。<b>智慧是解決煩惱的根本能力，而知識僅僅是工作的工具。</b></p>
               </div>
             </div>
           </div>
@@ -1552,7 +1567,7 @@
             <div class="value-balance-box">
               <div class="value-card objective">
                 <h3>命運是可以轉變的</h3>
-                <p style="line-height:1.6; color:#fff;">袁了凡的故事證明了，命運絕非冰冷、一成不變的定數，而是可以隨時透過我們的「起心動念與積德行善」而進行天翻地覆的重塑。本書新譯本流暢優雅，是開啟立命大智慧的鑰匙。</p>
+                <p style="line-height:1.6; color:var(--text-main);">袁了凡的故事證明了，命運絕非冰冷、一成不變的定數，而是可以隨時透過我們的「起心動念與積德行善」而進行天翻地覆的重塑。本書新譯本流暢優雅，是開啟立命大智慧的鑰匙。</p>
               </div>
             </div>
           </div>
@@ -1587,7 +1602,7 @@
             <div class="value-balance-box">
               <div class="value-card objective">
                 <h3>宿命前的平靜人生</h3>
-                <p style="line-height:1.6; color:#fff;">倘若沒有後續的神奇因緣，袁了凡可能只會一生作為一名默默無聞、在本分中行善的善良中醫過完平靜的一生。然而，一次寺廟相遇，徹底拉開了他波瀾壯闊的人生改命序幕。</p>
+                <p style="line-height:1.6; color:var(--text-main);">倘若沒有後續的神奇因緣，袁了凡可能只會一生作為一名默默無聞、在本分中行善的善良中醫過完平靜的一生。然而，一次寺廟相遇，徹底拉開了他波瀾壯闊的人生改命序幕。</p>
               </div>
             </div>
           </div>
@@ -1622,7 +1637,7 @@
             <div class="value-balance-box">
               <div class="value-card objective">
                 <h3>定數鐵籠的閉合</h3>
-                <p style="line-height:1.6; color:#fff;">老先生隨即將了凡一生的命運吉凶，包括幾歲考上縣學、第幾名、何時當官、甚至死於何時、無子等定數，全部寫下了詳細清單。了凡因此重拾書本，踏入這場與「宿命」的對決中。</p>
+                <p style="line-height:1.6; color:var(--text-main);">老先生隨即將了凡一生的命運吉凶，包括幾歲考上縣學、第幾名、何時當官、甚至死於何時、無子等定數，全部寫下了詳細清單。了凡因此重拾書本，踏入這場與「宿命」的對決中。</p>
               </div>
             </div>
           </div>
@@ -1657,7 +1672,7 @@
             <div class="value-balance-box">
               <div class="value-card subjective">
                 <h3>心如死灰的凡夫</h3>
-                <p style="line-height:1.6; color:#fff;">既然一切努力都是白費、一切吉凶皆有命定，了凡的心靈走向了徹底的虛無與麻木。他放棄了無謂的掙扎，徹底活成了一個毫無生機、被動等待命運清算單到來的凡夫俗子。</p>
+                <p style="line-height:1.6; color:var(--text-main);">既然一切努力都是白費、一切吉凶皆有命定，了凡的心靈走向了徹底的虛無與麻木。他放棄了無謂的掙扎，徹底活成了一個毫無生機、被動等待命運清算單到來的凡夫俗子。</p>
               </div>
             </div>
           </div>
@@ -1692,7 +1707,7 @@
             <div class="value-balance-box">
               <div class="value-card objective">
                 <h3>冰冷的死水心境</h3>
-                <p style="line-height:1.6; color:#fff; font-style:italic;">「我只是無可奈何罷了。」</p>
+                <p style="line-height:1.6; color:var(--text-main); font-style:italic;">「我只是無可奈何罷了。」</p>
                 <p style="line-height:1.6; color:var(--text-muted); margin-top:0.5rem;">了凡平靜地回答：我一生的名利、得失、甚至壽命無子，早已被孔老先生算得清清楚楚、分毫不差。就算動念也毫無意義，所以我只是不得不「不想」罷了。這句坦白，道盡了宿命籠罩下的麻木。</p>
               </div>
             </div>
@@ -1728,7 +1743,7 @@
             <div class="value-balance-box">
               <div class="value-card objective">
                 <h3>轉禍為福的無上密</h3>
-                <p style="line-height:1.6; color:#fff; margin-bottom:0.8rem;">雲谷禪師開示：命運完全是由自我的心性作為而決定，福報也是因自心積累而獲得的。</p>
+                <p style="line-height:1.6; color:var(--text-main); margin-bottom:0.8rem;">雲谷禪師開示：命運完全是由自我的心性作為而決定，福報也是因自心積累而獲得的。</p>
                 <p style="line-height:1.6; color:var(--text-muted);">「禍福無門，惟人自召。」只要我們發心斷惡修善，去掠小我私欲，命運的鐵鎖便會當場粉碎，這便是無上的「立命之理」。</p>
               </div>
             </div>
@@ -1767,7 +1782,7 @@
             <div class="value-balance-box">
               <div class="value-card objective">
                 <h3>自性本自具足</h3>
-                <p style="line-height:1.6; color:#fff;">佛陀從不說妄語。人只要樂於在心田（方寸）中播種無私利他的種子，辛勤耕耘、力行改過，生命便能完全超脫宿命枷鎖，創造至為圓滿的人生前景。</p>
+                <p style="line-height:1.6; color:var(--text-main);">佛陀從不說妄語。人只要樂於在心田（方寸）中播種無私利他的種子，辛勤耕耘、力行改過，生命便能完全超脫宿命枷鎖，創造至為圓滿的人生前景。</p>
               </div>
             </div>
           </div>
@@ -1802,7 +1817,7 @@
             <div class="value-balance-box">
               <div class="value-card objective">
                 <h3>改過第一，命運重塑</h3>
-                <p style="line-height:1.6; color:#fff;">了凡當即向佛菩薩發誓，立志行三千件善事以求子嗣。他不再被動等待，而是拿起了改過自新這把拂塵，開始清掃心靈的塵埃。</p>
+                <p style="line-height:1.6; color:var(--text-main);">了凡當即向佛菩薩發誓，立志行三千件善事以求子嗣。他不再被動等待，而是拿起了改過自新這把拂塵，開始清掃心靈的塵埃。</p>
               </div>
             </div>
           </div>
@@ -1837,7 +1852,7 @@
             <div class="value-balance-box">
               <div class="value-card objective">
                 <h3>知恥近乎勇</h3>
-                <p style="line-height:1.6; color:#fff; font-style:italic;">「知恥而後勇。」</p>
+                <p style="line-height:1.6; color:var(--text-main); font-style:italic;">「知恥而後勇。」</p>
                 <p style="line-height:1.6; color:var(--text-muted); margin-top:0.5rem;">承認自我的平庸與自私，並不丟臉。羞恥心就像一股猛烈的狂風，能瞬間吹散遮蔽心靈天良的厚重烏雲，激發人立志改過重生的蓋世勇氣。</p>
               </div>
             </div>
@@ -1873,7 +1888,7 @@
             <div class="value-balance-box">
               <div class="value-card objective">
                 <h3>君子有所畏</h3>
-                <p style="line-height:1.6; color:#fff;">「君子防治於未然，畏天命，畏聖人之言。」有了這份深深的恭敬敬畏，我們在獨處（慎獨）時自然戰戰兢兢，不敢有絲毫放逸與苟且，自然遠離災難。</p>
+                <p style="line-height:1.6; color:var(--text-main);">「君子防治於未然，畏天命，畏聖人之言。」有了這份深深的恭敬敬畏，我們在獨處（慎獨）時自然戰戰兢兢，不敢有絲毫放逸與苟且，自然遠離災難。</p>
               </div>
             </div>
           </div>
@@ -1908,7 +1923,7 @@
             <div class="value-balance-box">
               <div class="value-card objective">
                 <h3>勇氣是實踐的雙翼</h3>
-                <p style="line-height:1.6; color:#fff; font-style:italic;">「當斷不斷，必受其亂。」</p>
+                <p style="line-height:1.6; color:var(--text-main); font-style:italic;">「當斷不斷，必受其亂。」</p>
                 <p style="line-height:1.6; color:var(--text-muted); margin-top:0.5rem;">知過而不勇改，猶如看病不吃藥。唯有發揮雷霆萬鈞的勇猛決心，才能克服骨子裡的惰性與頑固習氣，讓改過修身大獲成功。</p>
               </div>
             </div>
@@ -1944,7 +1959,7 @@
             <div class="value-balance-box">
               <div class="value-card subjective">
                 <h3>事上改的侷限</h3>
-                <p style="line-height:1.6; color:#fff;">事上改是改過之初的必要輔助，但絕非究竟解。一味勉強壓抑容易造成心理的扭曲，因此不屬於上乘的智慧法門。</p>
+                <p style="line-height:1.6; color:var(--text-main);">事上改是改過之初的必要輔助，但絕非究竟解。一味勉強壓抑容易造成心理的扭曲，因此不屬於上乘的智慧法門。</p>
               </div>
             </div>
           </div>
@@ -1979,7 +1994,7 @@
             <div class="value-balance-box">
               <div class="value-card objective">
                 <h3>明理則豁然</h3>
-                <p style="line-height:1.6; color:#fff;">理上改是中等智慧的實踐。通過格物致知，降伏心中的愚昧偏執，讓言行自然趨於中庸合禮，境界高雅許多。</p>
+                <p style="line-height:1.6; color:var(--text-main);">理上改是中等智慧的實踐。通過格物致知，降伏心中的愚昧偏執，讓言行自然趨於中庸合禮，境界高雅許多。</p>
               </div>
             </div>
           </div>
@@ -2010,7 +2025,7 @@
             <div class="value-balance-box">
               <div class="value-card objective" style="border-color: var(--primary);">
                 <h3>心上改的太陽境界</h3>
-                <p style="line-height:1.6; color:#fff;">這如同「旭日東昇，百魅自消」。不需要一件件去戒除，只要心靈時時清澈正本，所有黑暗邪私便自然消融瓦解。這是聖賢歷代相傳改過的終極秘密心法。</p>
+                <p style="line-height:1.6; color:var(--text-main);">這如同「旭日東昇，百魅自消」。不需要一件件去戒除，只要心靈時時清澈正本，所有黑暗邪私便自然消融瓦解。這是聖賢歷代相傳改過的終極秘密心法。</p>
               </div>
             </div>
           </div>
@@ -2045,7 +2060,7 @@
             <div class="value-balance-box">
               <div class="value-card objective">
                 <h3>中峰禪師的棒喝</h3>
-                <p style="line-height:1.6; color:#fff; font-style:italic;">「利人者公，公則為真；利己者私，私則為假。」</p>
+                <p style="line-height:1.6; color:var(--text-main); font-style:italic;">「利人者公，公則為真；利己者私，私則為假。」</p>
                 <p style="line-height:1.6; color:var(--text-muted); margin-top:0.5rem;">元朝中峰國師直言：行善打人若是出於愛敬心（如父母責打調皮孩子），亦是善；諂媚迎合以求名利，即使表現再恭敬，也是惡。善惡全在於「心性的無私度」。</p>
               </div>
             </div>
@@ -2081,7 +2096,7 @@
             <div class="value-balance-box">
               <div class="value-card objective">
                 <h3>積善之家，必有餘慶</h3>
-                <p style="line-height:1.6; color:#fff;">天道最是公平。累積陰德的人，鬼神皆會默默護持。我們應多做默默無聞的善事，保護好那顆純淨的無私天良，這才是真正的高明智慧。</p>
+                <p style="line-height:1.6; color:var(--text-main);">天道最是公平。累積陰德的人，鬼神皆會默默護持。我們應多做默默無聞的善事，保護好那顆純淨的無私天良，這才是真正的高明智慧。</p>
               </div>
             </div>
           </div>
@@ -2117,7 +2132,7 @@
             <div class="value-balance-box">
               <div class="value-card objective">
                 <h3>心量決定功德大小</h3>
-                <p style="line-height:1.6; color:#fff;">行善的寬度取決於您心量的大小。<b>以無私大心包容眾生，小善亦是滿善；以功利狹隘心算計得失，大善亦只是半善。</b>這正是「一切萬法，隨心而轉」的奧秘。</p>
+                <p style="line-height:1.6; color:var(--text-main);">行善的寬度取決於您心量的大小。<b>以無私大心包容眾生，小善亦是滿善；以功利狹隘心算計得失，大善亦只是半善。</b>這正是「一切萬法，隨心而轉」的奧秘。</p>
               </div>
             </div>
           </div>
@@ -2152,7 +2167,7 @@
             <div class="value-balance-box">
               <div class="value-card objective">
                 <h3>不言之教，化育萬物</h3>
-                <p style="line-height:1.6; color:#fff;">與人為善絕非自命清高地指責他人之錯，而是用**謙讓、包容與真誠的德行**去感化對方，成人之美，引導人心自動歸於善良天良。</p>
+                <p style="line-height:1.6; color:var(--text-main);">與人為善絕非自命清高地指責他人之錯，而是用**謙讓、包容與真誠的德行**去感化對方，成人之美，引導人心自動歸於善良天良。</p>
               </div>
             </div>
           </div>
@@ -2187,7 +2202,7 @@
             <div class="value-balance-box">
               <div class="value-card objective">
                 <h3>大仁大義之基石</h3>
-                <p style="line-height:1.6; color:#fff;">愛敬存心不是表面客套，而是<b>發自內心的同理與同體大悲</b>。心中常存對生命的敬畏與熱愛，行善自然隨緣而發，永不枯竭。</p>
+                <p style="line-height:1.6; color:var(--text-main);">愛敬存心不是表面客套，而是<b>發自內心的同理與同體大悲</b>。心中常存對生命的敬畏與熱愛，行善自然隨緣而發，永不枯竭。</p>
               </div>
             </div>
           </div>
@@ -2222,7 +2237,7 @@
             <div class="value-balance-box">
               <div class="value-card objective">
                 <h3>播灑良善種子</h3>
-                <p style="line-height:1.6; color:#fff;">成人之美能遏制社會的戾氣，勸人為善能啟迪世人的懵懂。**這兩者皆是轉化社會風氣、積累大功德的至高實踐。**</p>
+                <p style="line-height:1.6; color:var(--text-main);">成人之美能遏制社會的戾氣，勸人為善能啟迪世人的懵懂。**這兩者皆是轉化社會風氣、積累大功德的至高實踐。**</p>
               </div>
             </div>
           </div>
@@ -2257,7 +2272,7 @@
             <div class="value-balance-box">
               <div class="value-card objective">
                 <h3>澤被十方</h3>
-                <p style="line-height:1.6; color:#fff;">救人一命勝造七級浮屠；興建大利造福千家萬戶。這兩項善行具備極強的社會客觀人生價值，能為自身與子孫後代積累極深厚的天地福氣。</p>
+                <p style="line-height:1.6; color:var(--text-main);">救人一命勝造七級浮屠；興建大利造福千家萬戶。這兩項善行具備極強的社會客觀人生價值，能為自身與子孫後代積累極深厚的天地福氣。</p>
               </div>
             </div>
           </div>
@@ -2302,7 +2317,7 @@
             <div class="value-balance-box">
               <div class="value-card objective">
                 <h3>大安心的完整軌道</h3>
-                <p style="line-height:1.6; color:#fff;">這十條行善路徑，涵蓋了人與自心、人與社會、人與自然生態的和諧共生之道，是我們在日常實踐中修心安心的完備地圖。</p>
+                <p style="line-height:1.6; color:var(--text-main);">這十條行善路徑，涵蓋了人與自心、人與社會、人與自然生態的和諧共生之道，是我們在日常實踐中修心安心的完備地圖。</p>
               </div>
             </div>
           </div>
@@ -2337,7 +2352,7 @@
             <div class="value-balance-box">
               <div class="value-card objective" style="border-color: var(--secondary);">
                 <h3>謙德是保福的總閘門</h3>
-                <p style="line-height:1.6; color:#fff; font-style:italic;">「器虛則受，實則不受。」</p>
+                <p style="line-height:1.6; color:var(--text-main); font-style:italic;">「器虛則受，實則不受。」</p>
                 <p style="line-height:1.6; color:var(--text-muted); margin-top:0.5rem;">立命、改過、積善雖然累積了福報，但如果沾沾自喜、狂妄自傲，福報會瞬間漏光。<b>「謙德」是長保福德的大水閘。唯有謙卑，才能包容萬物，笑納人生。</b></p>
               </div>
             </div>
@@ -2373,7 +2388,7 @@
             <div class="value-balance-box">
               <div class="value-card objective">
                 <h3>性靈的終身修煉</h3>
-                <p style="line-height:1.6; color:#fff;">品格教育絕非生硬背書，而是引導生命在成長的每一階段，安住在相應的心安寧靜之中，活出和諧圓滿的自我。</p>
+                <p style="line-height:1.6; color:var(--text-main);">品格教育絕非生硬背書，而是引導生命在成長的每一階段，安住在相應的心安寧靜之中，活出和諧圓滿的自我。</p>
               </div>
             </div>
           </div>
@@ -2408,7 +2423,7 @@
             <div class="value-balance-box">
               <div class="value-card objective" style="border-color: var(--secondary);">
                 <h3>井水不落一粒微塵</h3>
-                <p style="line-height:1.6; color:#fff; font-style:italic;">「大愛無聲，潤物無言。」</p>
+                <p style="line-height:1.6; color:var(--text-main); font-style:italic;">「大愛無聲，潤物無言。」</p>
                 <p style="line-height:1.6; color:var(--text-muted); margin-top:0.5rem;">此階段切忌急於灌輸文字與算數。用最溫柔、無雜質的家庭和諧，保護並滋養孩子那顆脆弱、天真純潔的直覺性靈，是第一要義。</p>
               </div>
             </div>
@@ -2444,7 +2459,7 @@
             <div class="value-balance-box">
               <div class="value-card objective">
                 <h3>童蒙養正的自然之道</h3>
-                <p style="line-height:1.6; color:#fff;">現代教育往往本末倒置：在幼童理解力不足時強求其理解，在记忆力退化時才要求其死記。<b>童蒙養正順應天時，將宇宙核心真理預先注入，為生命打下千秋道德正骨。</b></p>
+                <p style="line-height:1.6; color:var(--text-main);">現代教育往往本末倒置：在幼童理解力不足時強求其理解，在记忆力退化時才要求其死記。<b>童蒙養正順應天時，將宇宙核心真理預先注入，為生命打下千秋道德正骨。</b></p>
               </div>
             </div>
           </div>
@@ -2479,7 +2494,7 @@
             <div class="value-balance-box">
               <div class="value-card objective">
                 <h3>少年的宏偉格局</h3>
-                <p style="line-height:1.6; color:#fff; font-style:italic;">「志存高遠，器識宏大。」</p>
+                <p style="line-height:1.6; color:var(--text-main); font-style:italic;">「志存高遠，器識宏大。」</p>
                 <p style="line-height:1.6; color:var(--text-muted); margin-top:0.5rem;">有了利益大眾的客觀人生志向，生命的能量就會徹底噴湧，在未來漫長的逆境磨礪中，自然能挺拔如松、堅不可摧。</p>
               </div>
             </div>
@@ -2515,7 +2530,7 @@
             <div class="value-balance-box">
               <div class="value-card objective">
                 <h3>成年養德之魂</h3>
-                <p style="line-height:1.6; color:#fff;">成年的修養不是逃避紅塵，而是在**煙火氣與繁雜工作中堅守天良**。遇到逆境時不遷怒他人，勇敢承擔，在紅塵的千錘百鍊中打磨出金剛般的生命大定力。</p>
+                <p style="line-height:1.6; color:var(--text-main);">成年的修養不是逃避紅塵，而是在**煙火氣與繁雜工作中堅守天良**。遇到逆境時不遷怒他人，勇敢承擔，在紅塵的千錘百鍊中打磨出金剛般的生命大定力。</p>
               </div>
             </div>
           </div>
@@ -2550,7 +2565,7 @@
             <div class="value-balance-box">
               <div class="value-card objective" style="border-color: var(--primary);">
                 <h3>晚年養道之圓滿</h3>
-                <p style="line-height:1.6; color:#fff; font-style:italic;">「回首向來蕭瑟處，歸去，也無風雨也無晴。」</p>
+                <p style="line-height:1.6; color:var(--text-main); font-style:italic;">「回首向來蕭瑟處，歸去，也無風雨也無晴。」</p>
                 <p style="line-height:1.6; color:var(--text-muted); margin-top:0.5rem;">晚年是整座生命寶塔的塔尖。將一身紅塵微塵洗滌殆盡，化為如如不動的靈明自性，這便是笑納人生最神聖圓滿的結尾。</p>
               </div>
             </div>
@@ -2586,7 +2601,7 @@
             <div class="value-balance-box">
               <div class="value-card objective">
                 <h3>忠恕存心，萬法安心</h3>
-                <p style="line-height:1.6; color:#fff;">落實一切善法，悉皆秉持「忠恕存心」，真誠利他，無所求而為，並不斷深入奉行，則必可得生之大安心，進而得死之大安心，內外圓滿。</p>
+                <p style="line-height:1.6; color:var(--text-main);">落實一切善法，悉皆秉持「忠恕存心」，真誠利他，無所求而為，並不斷深入奉行，則必可得生之大安心，進而得死之大安心，內外圓滿。</p>
               </div>
             </div>
           </div>
@@ -2621,7 +2636,7 @@
             <div class="value-balance-box">
               <div class="value-card objective">
                 <h3>恕道了義的融合</h3>
-                <p style="line-height:1.6; color:#fff;">唯有洞明「己所不欲，勿施於人」恕道真諦的人，才能隨時將心比心，先為他人設想，在起心動念處化解過失。<b>這才是真正與「良知本心」同頻共振的生命覺醒者。</b></p>
+                <p style="line-height:1.6; color:var(--text-main);">唯有洞明「己所不欲，勿施於人」恕道真諦的人，才能隨時將心比心，先為他人設想，在起心動念處化解過失。<b>這才是真正與「良知本心」同頻共振的生命覺醒者。</b></p>
               </div>
             </div>
           </div>
@@ -2656,22 +2671,691 @@
             <div class="value-balance-box">
               <div class="value-card objective">
                 <h3>真理的生命見證</h3>
-                <p style="line-height:1.6; color:#fff;">真理從不是空洞的學問，而是要在生活中流淌、在行持中體現的活水。<b>讀者的實踐迴響，構築了整座生命寶塔最美麗動人、熠熠生輝的基石。</b></p>
+                <p style="line-height:1.6; color:var(--text-main);">真理從不是空洞的學問，而是要在生活中流淌、在行持中體現的活水。<b>讀者的實踐迴響，構築了整座生命寶塔最美麗動人、熠熠生輝的基石。</b></p>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Slide 50: 結語 -->
+      <!-- Slide 50: 讀者回響前言 -->
       <div class="slide" data-slide-index="50" data-part-group="part4">
+        <div class="slide-card split">
+          <div class="slide-left">
+            <div class="slide-category">單元四：行深見證與讀者回響 | 前言</div>
+            <h2 class="slide-title">讀者回響前言：真理的生命實踐與見證</h2>
+            <p class="slide-desc">《從容而行：笑納人生的智慧》出版後，在全台乃至全球華人讀者圈中，引發了巨大的迴響。讀者們表示，在高度競爭、功利取向的現代都市中，這本書宛如一劑心靈清涼藥，解救了他們焦慮枯竭的靈魂。</p>
+            <div class="features-list">
+              <div class="feature-item">
+                <div class="feature-icon">✨</div>
+                <div class="feature-text">
+                  <h4>知行合一的行持狂潮</h4>
+                  <p>讀者不再把聖賢書當作空洞理論，而是切實結合生活，在職場、家庭與自我生命中落實「立命、改過、積善」，展現了驚人的實踐力量。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide-right">
+            <div class="value-balance-box">
+              <div class="value-card objective">
+                <h3>生命自覺的真實力量</h3>
+                <p style="line-height:1.6; color:var(--text-main);">「實踐是檢驗真理的唯一標準。」接下來的 20 個案例與專題，均摘錄自真實讀者寫信給周易老師的實踐心得，見證了智慧在日常流淌的美好姿態。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 51: 案例一：企業高管的心上改過 -->
+      <div class="slide" data-slide-index="51" data-part-group="part4">
+        <div class="slide-card split">
+          <div class="slide-left">
+            <div class="slide-category">單元四：行深見證與讀者回響 | 4.2</div>
+            <h2 class="slide-title">案例一：企業經理人的「心上改過」與職場和諧</h2>
+            <p class="slide-desc">某上市科技公司總經理李先生，分享了他實踐「心上改過」的痛苦與蛻變：</p>
+            <div class="features-list">
+              <div class="feature-item">
+                <div class="feature-icon">🧹</div>
+                <div class="feature-text">
+                  <h4>從「事上克制」到「心上消融」</h4>
+                  <p>過去他脾氣極度傲慢暴躁。起初他試著在開會想罵人時強行忍住（事上改），但忍得極其痛苦，內傷又憋悶，甚至對部屬產生冷暴力。</p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">⚡</div>
+                <div class="feature-text">
+                  <h4>心正意誠，怒氣自消</h4>
+                  <p>讀完本書後，他嘗試在怒氣剛動時，反省自心的傲慢與自私本源，將心比心體諒部屬。一念真誠利他，心中的瞋恨在萌芽時便瞬間瓦解，工作氛圍煥然一新。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide-right">
+            <div class="value-balance-box">
+              <div class="value-card objective">
+                <h3>李經理的實踐感悟</h3>
+                <p style="line-height:1.6; color:var(--text-main); font-style:italic;">「以前我把工作當戰場，現在我把職場當作修德安心的道場。當心念改變了，連最難纏的專案也順利推動了。」</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 52: 案例二：憂鬱症患者的安心港灣 -->
+      <div class="slide" data-slide-index="52" data-part-group="part4">
+        <div class="slide-card split">
+          <div class="slide-left">
+            <div class="slide-category">單元四：行深見證與讀者回響 | 4.3</div>
+            <h2 class="slide-title">案例二：憂鬱症患者重尋心靈安心之港灣</h2>
+            <p class="slide-desc">一位長期飽受重度焦慮與憂鬱折磨的年輕讀者陳小姐，寄來了她的感人來信：</p>
+            <div class="features-list">
+              <div class="feature-item">
+                <div class="feature-icon">⚓</div>
+                <div class="feature-text">
+                  <h4>打破「主觀人生價值」的綁架</h4>
+                  <p>過去她拼命向外求名利、求他人肯定，把自己逼上心靈死角。抑鬱的折磨讓她食不知味、夜不能寐。</p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">🕊️</div>
+                <div class="feature-text">
+                  <h4>接納自我的生命安頓</h4>
+                  <p>透過本書「心安即是歸處」的指引，她學會每天卸下偽裝，關注內在的清寧，不再跟外界攀比。她回憶道：<b>「當我不再死死執著於小我的得失時，我的心終於安下來了。」</b></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide-right">
+            <div class="value-balance-box">
+              <div class="value-card subjective">
+                <h3>陳小姐的安心見證</h3>
+                <p style="line-height:1.6; color:var(--text-main); font-style:italic;">「安心的能力是生命最高貴的禮物。本書沒有給我冷冰冰的藥方，卻引導我找到了源源不絕的生命活水。」</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 53: 案例三：焦慮母親的家庭實驗 -->
+      <div class="slide" data-slide-index="53" data-part-group="part4">
+        <div class="slide-card split">
+          <div class="slide-left">
+            <div class="slide-category">單元四：行深見證與讀者回響 | 4.4</div>
+            <h2 class="slide-title">案例三：焦慮母親的「幼兒養性」家庭實驗</h2>
+            <p class="slide-desc">新竹的家庭主婦張媽媽，為了改善家中有高敏感、容易驚恐哭鬧的幼兒，實踐了「幼兒養性」的修持：</p>
+            <div class="features-list">
+              <div class="feature-item">
+                <div class="feature-icon">👶</div>
+                <div class="feature-text">
+                  <h4>改善最敏感的底片環境</h4>
+                  <p>她和丈夫以前常在孩子面前因瑣事大聲爭吵。意識到這會給孩子留下心靈暗影後，夫妻倆約定絕不在孩子面前流露一絲暴怒。</p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">🌸</div>
+                <div class="feature-text">
+                  <h4>大愛無聲的祥和磁場</h4>
+                  <p>他們用最溫柔的擁抱、真誠讚美的語氣 and 古典安詳的音樂，為孩子營造極致安全和諧的空氣。短短三個月，孩子變得安詳穩定，哭鬧次數急遽減少。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide-right">
+            <div class="value-balance-box">
+              <div class="value-card objective">
+                <h3>張媽媽的心性反省</h3>
+                <p style="line-height:1.6; color:var(--text-main);">「幼兒養性，本質上是父母在養自我的心性。當父母的心平和了，家裡就成了最溫暖、最具安全感的港灣。」</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 54: 案例四：國中教師實踐「童蒙養正」經典教育 -->
+      <div class="slide" data-slide-index="54" data-part-group="part4">
+        <div class="slide-card split">
+          <div class="slide-left">
+            <div class="slide-category">單元四：行深見證與讀者回響 | 4.5</div>
+            <h2 class="slide-title">案例四：國中教師實踐「童蒙養正」經典教育</h2>
+            <p class="slide-desc">台北某中學導師林老師，在班級中大膽嘗試了經典道德植入實驗：</p>
+            <div class="features-list">
+              <div class="feature-item">
+                <div class="feature-icon">📚</div>
+                <div class="feature-text">
+                  <h4>晨讀 15 分鐘經典誦讀</h4>
+                  <p>林老師不跟風急功近利的考試，而是每天早自習帶領學生反覆誦讀《論語》與《了凡四訓》精要。不強求其立馬理解，只求經典印入八識田中。</p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">🛡️</div>
+                <div class="feature-text">
+                  <h4>品德基因的悄然萌芽</h4>
+                  <p>半年後，班級風氣大變。學生在發生衝突時，居然會自發運用「恕道」或「不遷怒」來自省。同儕霸凌現象完全消失，班級凝聚力名列前茅。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide-right">
+            <div class="value-balance-box">
+              <div class="value-card objective">
+                <h3>林老師的教育見證</h3>
+                <p style="line-height:1.6; color:var(--text-main); font-style:italic;">「童蒙養正，為生命種下一生受用無窮的道德錦囊。現在背下的每句話，都是孩子未來人生驚濤駭浪中的定風丹。」</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 55: 案例五：叛逆少年的「少年養志」心靈覺醒 -->
+      <div class="slide" data-slide-index="55" data-part-group="part4">
+        <div class="slide-card split">
+          <div class="slide-left">
+            <div class="slide-category">單元四：行深見證與讀者回響 | 4.7</div>
+            <h2 class="slide-title">案例五：叛逆少年的「少年養志」心靈覺醒</h2>
+            <p class="slide-desc">十七歲的青少年小劉，曾是重度沉迷網路遊戲、叛逆厭學、讓父母束手無策的迷茫少年：</p>
+            <div class="features-list">
+              <div class="feature-item">
+                <div class="feature-icon">🚀</div>
+                <div class="feature-text">
+                  <h4>缺乏人生志向的心靈空洞</h4>
+                  <p>過去他整天渾渾噩噩，被升學考試的壓力逼得叛逆反抗。讀完本書「少年養志」一節後，他大受偉人傳記與利他精神的震撼。</p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">🤝</div>
+                <div class="feature-text">
+                  <h4>立大志，能量徹底爆發</h4>
+                  <p>他決心放棄虛無的虛擬世界，立志報考醫學系以幫助苦難者解脫疾病。志向確立後，他的眼神恢復了神采，學習成績從後段班一路飆升至前茅。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide-right">
+            <div class="value-balance-box">
+              <div class="value-card subjective">
+                <h3>小劉同學的誠摯回寫</h3>
+                <p style="line-height:1.6; color:var(--text-main); font-style:italic;">「志不立，天下無可成之事。當我找到了『超越自我名利』的利他目標時，生命的能量就像噴泉一樣爆發了出來，叛逆的焦慮也隨之消退了。」</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 56: 案例六：企業領袖的「成人養德」與利他誠信 -->
+      <div class="slide" data-slide-index="56" data-part-group="part4">
+        <div class="slide-card split">
+          <div class="slide-left">
+            <div class="slide-category">單元四：行深見證與讀者回響 | 4.7</div>
+            <h2 class="slide-title">案例六：企業領袖的「成人養德」與利他誠信</h2>
+            <p class="slide-desc">傳產企業家趙董事長，分享了他在商業大潮中如何把公司當作修行道場 the practice of business:</p>
+            <div class="features-list">
+              <div class="feature-item">
+                <div class="feature-icon">💼</div>
+                <div class="feature-text">
+                  <h4>以「德者才之主」營運公司</h4>
+                  <p>他曾一度盲目追求財報數字與毛利。讀書後，他將核心理念修改為「解決社會與客戶的真實痛點」，並嚴控產品質量，絕不為了暴利偷工減料。</p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">🛡️</div>
+                <div class="feature-text">
+                  <h4>善待員工與社會利他</h4>
+                  <p>他主動提高基層薪資，並將盈餘默默投入偏鄉教育（積陰德）。雖然短期成本提升，卻換來了員工極高的忠誠度，產品口碑大爆發，企業在不景氣中逆勢翻倍成長。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide-right">
+            <div class="value-balance-box">
+              <div class="value-card objective">
+                <h3>趙董事長的心得</h3>
+                <p style="line-height:1.6; color:var(--text-main);">「職場是成人最偉大的歷事修身道場。誠信與利他，不僅是最好的品德，更是企業能立於不敗之地的最高明商戰智慧。」</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 57: 案例七：空巢老人的「晚年養道」與安詳安頓 -->
+      <div class="slide" data-slide-index="57" data-part-group="part4">
+        <div class="slide-card split">
+          <div class="slide-left">
+            <div class="slide-category">單元四：行深見證與讀者回響 | 4.8</div>
+            <h2 class="slide-title">案例七：空巢老人的「晚年養道」與安詳安頓</h2>
+            <p class="slide-desc">七十二歲的退休公務員沈大爺，兒女皆在國外工作，長期獨居在家，曾感到極度孤獨與虛無：</p>
+            <div class="features-list">
+              <div class="feature-item">
+                <div class="feature-icon">🌅</div>
+                <div class="feature-text">
+                  <h4>晚年從「失落」轉向「養道」</h4>
+                  <p>讀完「晚年養道」一節，他豁然開朗。晚年不該是等待生命枯萎的過程，而是靈魂洗盡鉛華、回歸自然性靈的黃金修行期。</p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">📖</div>
+                <div class="feature-text">
+                  <h4>熱心公益與智慧傳承</h4>
+                  <p>他走出家門，在社區圖書館擔任義務說故事爺爺，並給鄰里年輕人分享生活智慧。他的臉上恢復了祥和喜悅，孤獨感煙消雲散。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide-right">
+            <div class="value-balance-box">
+              <div class="value-card objective">
+                <h3>沈大爺的晚景心聲</h3>
+                <p style="line-height:1.6; color:var(--text-main); font-style:italic;">「『回首向來蕭瑟處，也無風雨也無晴。』晚年養道，讓我學會了感恩生命的每一刻，笑納老去的自然規律，心中每天都安詳泰然。」</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 58: 案例八：重病患者面對生死的「死之大安心」 -->
+      <div class="slide" data-slide-index="58" data-part-group="part4">
+        <div class="slide-card split">
+          <div class="slide-left">
+            <div class="slide-category">單元四：行深見證與讀者回響 | 4.9</div>
+            <h2 class="slide-title">案例八：重病患者面對生死的「死之大安心」</h2>
+            <p class="slide-desc">罹患晚期癌症的讀者高先生，在病榻上寄來了一封震撼人心的遺書般的心得：</p>
+            <div class="features-list">
+              <div class="feature-item">
+                <div class="feature-icon">🕯️</div>
+                <div class="feature-text">
+                  <h4>超越肉體痛苦的心安</h4>
+                  <p>高先生經歷了多輪痛苦化療，曾極度驚恐死亡。在反覆閱讀本書「生與死兩安」的章節後，他漸漸放下了對肉體皮囊的執念。</p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">✨</div>
+                <div class="feature-text">
+                  <h4>如如不動的生死解脫</h4>
+                  <p>他全心安住在當下的祥和之中，對照顧他的醫護與家人心存無盡 of 感謝。在病重之際，他的臉上沒有一絲哀怨與驚懼，平靜如水，溫柔祥和。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide-right">
+            <div class="value-balance-box">
+              <div class="value-card subjective">
+                <h3>高先生的絕筆實踐</h3>
+                <p style="line-height:1.6; color:var(--text-main); font-style:italic;">「生命的尊貴在於安心的能力。我雖然肉體即將走向終點，但我自心已超脫無常，獲得了真正的死之大安心。這本書給了我最後的港灣。」</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 59: 案例九：司法調解員奉行「恕道」的不凡實踐 -->
+      <div class="slide" data-slide-index="59" data-part-group="part4">
+        <div class="slide-card split">
+          <div class="slide-left">
+            <div class="slide-category">單元四：行深見證與讀者回響 | 4.10</div>
+            <h2 class="slide-title">案例九：司法調解員奉行「恕道」的不凡實踐</h2>
+            <p class="slide-desc">基層法院調解員劉大姐，分享了她如何將「恕道」與「愛敬存心」化作消弭紅塵戾氣的神奇法寶：</p>
+            <div class="features-list">
+              <div class="feature-item">
+                <div class="feature-icon">⚖️</div>
+                <div class="feature-text">
+                  <h4>將心比心，化解對立</h4>
+                  <p>在面對為了一文錢或一口氣而吵得不可開交、揚言報復的當事人時，她不再冰冷背法條，而是用禮貌和慈悲心平氣和地引導雙方換位思考。</p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">🤝</div>
+                <div class="feature-text">
+                  <h4>恕存其心，當事人握手言和</h4>
+                  <p>她用真誠體恤消解當事人心中的怨氣，引導雙方「己所不欲，勿施於人」。近年來，經調解的糾紛有高達 90% 均當場握手言和，撤銷訴訟。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide-right">
+            <div class="value-balance-box">
+              <div class="value-card objective">
+                <h3>劉調解員的恕道格言</h3>
+                <p style="line-height:1.6; color:var(--text-main); font-style:italic;">「怨怨相報無了時。司法調解不僅要斷是非，更要安頓人心。當我們用恕道與愛敬去包容他人時，世間的堅冰就悄然融化了。」</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 60: 案例十：創業者的「不遷怒不貳過」反省功夫 -->
+      <div class="slide" data-slide-index="60" data-part-group="part4">
+        <div class="slide-card split">
+          <div class="slide-left">
+            <div class="slide-category">單元四：行深見證與讀者回響 | 4.11</div>
+            <h2 class="slide-title">案例十：創業者的「不遷怒不貳過」反省功夫</h2>
+            <p class="slide-desc">連鎖餐飲創業者吳先生，分享了他在事業面臨危機時，如何以顏回功夫自我洗心：</p>
+            <div class="features-list">
+              <div class="feature-item">
+                <div class="feature-icon">🛡️</div>
+                <div class="feature-text">
+                  <h4>不遷怒：絕不怨恨外界</h4>
+                  <p>當疫情爆發導致餐廳面臨虧損時，他強行克制怪罪環境、股東或員工的本能衝動，而是安靜坐下，深刻反省自己在經營決策上的盲點與傲慢。</p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">✨</div>
+                <div class="feature-text">
+                  <h4>不貳過：在起心動念處改進</h4>
+                  <p>他將自己發現的盲點（如擴張太急等）寫在案頭，並調整菜單、優化外送流程。言行上絕不再犯同樣錯誤。企業最終渡過危機，重獲健康成長。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide-right">
+            <div class="value-balance-box">
+              <div class="value-card objective">
+                <h3>吳先生的內省心得</h3>
+                <p style="line-height:1.6; color:var(--text-main);">「怨天尤人是最廉價的情緒發洩，反求諸己才是最高明的修行。當我不遷怒外界、徹底改過後，事業的危機反而成了我心性昇華的梯階。」</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 61: 讀者回響綜述一：家庭關係的和諧轉變 -->
+      <div class="slide" data-slide-index="61" data-part-group="part4">
+        <div class="slide-card split">
+          <div class="slide-left">
+            <div class="slide-category">單元四：行深見證與讀者回響 | 4.12</div>
+            <h2 class="slide-title">讀者回響綜述一：家庭關係的冰融與春天</h2>
+            <p class="slide-desc">在大量的讀者回信中，「家庭關係的和諧化解」佔據了至關重要的篇幅。許多長年冷戰、瀕臨破碎的家庭因而重獲春天：</p>
+            <div class="features-list">
+              <div class="feature-item">
+                <div class="feature-icon">💖</div>
+                <div class="feature-text">
+                  <h4>放下挑剔，愛敬存心</h4>
+                  <p>讀者表示：以前對伴侶或子女總是充滿了「主觀的挑剔與喜惡」（主觀價值），企圖強行扭曲對方配合自己，引發無窮的家庭爭吵與戾氣。</p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">🌸</div>
+                <div class="feature-text">
+                  <h4>換位同理，家庭重回和諧</h4>
+                  <p>當實踐「愛敬存心」與「己所不欲，勿施於人」後，夫妻學會了在日常互道感恩，理解包容對方的難處，家裡的空氣變得無比祥和與溫暖。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide-right">
+            <div class="value-balance-box">
+              <div class="value-card objective">
+                <h3>家和萬事興的真理</h3>
+                <p style="line-height:1.6; color:var(--text-main); font-style:italic;">「家庭不是講理的法庭，而是奉行恕道與慈悲的港灣。當我們改變了內在的挑剔心，伴侶與孩子的笑容就自然回來了。」</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 62: 讀者回響綜述二：工作與金錢觀念的淨化 -->
+      <div class="slide" data-slide-index="62" data-part-group="part4">
+        <div class="slide-card split">
+          <div class="slide-left">
+            <div class="slide-category">單元四：行深見證與讀者回響 | 4.13</div>
+            <h2 class="slide-title">讀者回響綜述二：工作與金錢觀念的淨化</h2>
+            <p class="slide-desc">許多讀者分享了讀完本書後，徹底改變了他們對工作意義、財富與物欲的病態執著：</p>
+            <div class="features-list">
+              <div class="feature-item">
+                <div class="feature-icon">🛒</div>
+                <div class="feature-text">
+                  <h4>從「物欲成癮」的無盡攀比中解脫</h4>
+                  <p>讀者坦言：以前月月當卡奴，追求名牌以填補心靈的空虛。讀書後明白了感官刺激只是飲鴆止渴，心靈的安心才是無價之寶。</p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">⚓</div>
+                <div class="feature-text">
+                  <h4>慷慨捨財，反得心靈大開闊</h4>
+                  <p>他們開始力行「捨財培德」，熱心資助貧病。驚奇地發現：<b>當對金錢的吝嗇與執著消失後，工作的焦慮不翼而飛，內心反而收穫了源源不絕的踏實大安心。</b></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide-right">
+            <div class="value-balance-box">
+              <div class="value-card objective">
+                <h3>讀者實踐體會</h3>
+                <p style="line-height:1.6; color:var(--text-main);">「以前我是金錢的奴隸，每天為了安全感而戰戰兢兢。現在我成了金錢的主人，在無私布施中體會到了靈魂大解脫的無限喜悅。」</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 63: 讀者回響綜述三：校園品格教育的生根 -->
+      <div class="slide" data-slide-index="63" data-part-group="part4">
+        <div class="slide-card split">
+          <div class="slide-left">
+            <div class="slide-category">單元四：行深見證與讀者回響 | 4.14</div>
+            <h2 class="slide-title">讀者回響綜述三：校園品格教育的生根與實踐</h2>
+            <p class="slide-desc">全台多所小學、中學與教育機構 of 教職員，在讀完「五階段品格教育」後，自發在校園中推行了品格美學實踐：</p>
+            <div class="features-list">
+              <div class="feature-item">
+                <div class="feature-icon">🏫</div>
+                <div class="feature-text">
+                  <h4>反對「才德脫節」的功利教育</h4>
+                  <p>教師們指出，現代學校太偏重考試技術。他們引入經典誦讀與「與人為善」的禮讓實踐，引導孩子在心性最純潔時培養道德正骨。</p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">🕊️</div>
+                <div class="feature-text">
+                  <h4>互助禮讓，校園霸凌消弭無形</h4>
+                  <p>推行一年後，班級同儕之間極具包容心。學生不再因成績落後而自卑自殘，班級內充滿了溫馨互助的讀書風氣，成就了最美的校園美學。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide-right">
+            <div class="value-balance-box">
+              <div class="value-card objective">
+                <h3>校長與教師的呼籲</h3>
+                <p style="line-height:1.6; color:var(--text-main); font-style:italic;">「才華是僕人，品德才是主人。培養出再聰明、再精明卻毫無良知良心的才子，對社會是一場災難。唯有品格教育，才能給孩子一生行穩致遠的大安心。」</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 64: 讀者回響綜述四：焦慮社會中的集體清涼劑 -->
+      <div class="slide" data-slide-index="64" data-part-group="part4">
+        <div class="slide-card split">
+          <div class="slide-left">
+            <div class="slide-category">單元四：行深見證與讀者回響 | 4.15</div>
+            <h2 class="slide-title">讀者回響綜述四：焦慮社會中的集體清涼劑</h2>
+            <p class="slide-desc">在一個集體浮躁、被不安全感與狂奔焦慮所包圍的現代商業社會中，大批讀者將本書視為「書案上隨時取用的降溫涼水」：</p>
+            <div class="features-list">
+              <div class="feature-item">
+                <div class="feature-icon">🍧</div>
+                <div class="feature-text">
+                  <h4>在煩囂紛擾中，尋回心靈平靜</h4>
+                  <p>都市白領表示，每當下班疲憊不堪、被指標與競爭折磨時，隨手翻閱幾頁，跟隨聖賢的理路內省自省，探求自我的安心，焦躁的心靈便能瞬間降溫、安定下來。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide-right">
+            <div class="value-balance-box">
+              <div class="value-card objective">
+                <h3>大眾讀者的集體表白</h3>
+                <p style="line-height:1.6; color:var(--text-main); font-style:italic;">「這本書沒有給我們打世俗的成功雞血，而是遞給了我們一盞心靈的清涼明燈。它告訴我們，成功不是名利地位，而是笑納人生、問心無愧的從容。」</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 65: 行深見證一：知行合一的改命功過格實踐 -->
+      <div class="slide" data-slide-index="65" data-part-group="part4">
+        <div class="slide-card split">
+          <div class="slide-left">
+            <div class="slide-category">單元四：行深見證與讀者回響 | 4.16</div>
+            <h2 class="slide-title">行深見證一：知行合一的改命功過格實踐</h2>
+            <p class="slide-desc">多位行持極深的讀者，主動結合 Obsidian 筆記庫與了凡功過格（Ledger of Merit and Demerit），在日常生活中力行改過修身：</p>
+            <div class="features-list">
+              <div class="feature-item">
+                <div class="feature-icon">📝</div>
+                <div class="feature-text">
+                  <h4>每日功過格自省日記</h4>
+                  <p>他們在 Obsidian 中建立每日範本，記下今日言行之功（如愛敬存心、默默行善）與過（如動怒、起貪念、傲慢）。透過精確的自我數據量化，杜絕自欺欺人。</p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">🧹</div>
+                <div class="feature-text">
+                  <h4>命運齒輪的實質改變</h4>
+                  <p>堅持一年後，讀者們表示，自心的覺察力變得無比敏銳，惡念幾乎不萌，福報與心靈安定感呈幾何級數上升，深刻印證了「命由我作，福自己求」的真理。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide-right">
+            <div class="value-balance-box">
+              <div class="value-card objective">
+                <h3>功過格修持見證</h3>
+                <p style="line-height:1.6; color:var(--text-main); font-style:italic;">「功過格不是給神明看的分數表，而是降伏自心頑固習氣的最強鏡子。當我老老實實面對自我的過失時，命運就已經掌握在自己手中了。」</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 66: 行深見證二：無私利他對身心靈健康的奇蹟影響 -->
+      <div class="slide" data-slide-index="66" data-part-group="part4">
+        <div class="slide-card split">
+          <div class="slide-left">
+            <div class="slide-category">單元四：行深見證與讀者回響 | 4.17</div>
+            <h2 class="slide-title">行深見證二：無私利他對身心靈健康的奇蹟影響</h2>
+            <p class="slide-desc">書中對客觀價值的論述，得到了現代醫學與身心靈實踐讀者的驚人實證反響：</p>
+            <div class="features-list">
+              <div class="feature-item">
+                <div class="feature-icon">🩺</div>
+                <div class="feature-text">
+                  <h4>利他行為的科學印證</h4>
+                  <p>醫學界讀者指出：科學研究證實，當人真誠投入「無私奉獻、救人危急」（客觀價值）時，身體會分泌大量的內啡肽與催產素，免疫力顯著提升。</p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">💖</div>
+                <div class="feature-text">
+                  <h4>心包太虛，百病不萌</h4>
+                  <p>許多長年受慢性病折磨的讀者反響：自從走出小我私欲的心靈牢籠、熱心投入無求的公益服務後，身體的諸多頑疾竟然不藥而癒。這深刻揭示了心性淨化對肉體的奇蹟療癒力。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide-right">
+            <div class="value-balance-box">
+              <div class="value-card objective">
+                <h3>身心合一的醫學見證</h3>
+                <p style="line-height:1.6; color:var(--text-main); font-style:italic;">「無私利他是最偉大的自然免疫劑。當我們的靈魂充滿了慈悲與大安心時，身體的每一個細胞都處於最完美的和諧狀態中。」</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 67: 行深見證三：謙德在現代商業競爭中的防腐劑作用 -->
+      <div class="slide" data-slide-index="67" data-part-group="part4">
+        <div class="slide-card split">
+          <div class="slide-left">
+            <div class="slide-category">單元四：行深見證與讀者回響 | 4.18</div>
+            <h2 class="slide-title">行深見證三：謙德在現代商業競爭中的防腐劑作用</h2>
+            <p class="slide-desc">多位企業管理層讀者，對「謙卦六爻皆吉」與「保福總閘門」進行了深刻的商業實踐回響：</p>
+            <div class="features-list">
+              <div class="feature-item">
+                <div class="feature-icon">⛰️</div>
+                <div class="feature-text">
+                  <h4>企業做大後的驕橫危機</h4>
+                  <p>企業家們感嘆：許多公司在賺錢擴張後，管理層自滿驕橫、聽不進反對聲音（盈滿則虧），往往一夕之間爆發危機、土崩瓦解。</p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">🛡️</div>
+                <div class="feature-text">
+                  <h4>謙卑自牧是長青的最強防腐劑</h4>
+                  <p>實踐「謙德之效」的經理人，時時虛心聽取一線員工與客戶的批評（虛下納福），不居功自傲，長保空器接納萬物。這讓企業成功避開無數決策死角，長青不倒。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide-right">
+            <div class="value-balance-box">
+              <div class="value-card objective">
+                <h3>企業管理的謙德智慧</h3>
+                <p style="line-height:1.6; color:var(--text-main); font-style:italic;">「地中有山，謙。高明卻甘居於人下，才是最深不可測的領導力。謙卑自牧，是企業不自我膨脹、永保健康長青的唯一抗體。」</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 68: 行深見證四：一切福田不離方寸的集體共鳴 -->
+      <div class="slide" data-slide-index="68" data-part-group="part4">
+        <div class="slide-card split">
+          <div class="slide-left">
+            <div class="slide-category">單元四：行深見證與讀者回響 | 4.19</div>
+            <h2 class="slide-title">行深見證四：一切福田不離方寸的集體共鳴</h2>
+            <p class="slide-desc">讀者群體在經歷改過與利他實踐後，對禪宗「福田不離方寸」的思想產生了石破天驚的集體感通與共鳴：</p>
+            <div class="features-list">
+              <div class="feature-item">
+                <div class="feature-icon">✨</div>
+                <div class="feature-text">
+                  <h4>福報是自心德行的自然投射</h4>
+                  <p>讀者見證：當他們不再怨天尤人、不再功利追求，而是老老實實耕耘自己這顆「真誠、慈悲 the conscience of mind」時，生活境遇與周圍人際的善意，竟然自動發生了天翻地覆的改善。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide-right">
+            <div class="value-balance-box">
+              <div class="value-card objective">
+                <h3>方寸福田的奧秘</h3>
+                <p style="line-height:1.6; color:var(--text-main); font-style:italic;">「向外求取名利得失，皆是無根的浮雲；唯有向心靈方寸播撒善與智慧的種子，感無不通。宇宙中最深厚的福報，本就藏在我們本自具足的真誠良知之中。」</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 69: 讀者信函摘錄：笑納人生的生命讚歌 -->
+      <div class="slide" data-slide-index="69" data-part-group="part4">
+        <div class="slide-card split">
+          <div class="slide-left">
+            <div class="slide-category">單元四：行深見證與讀者回響 | 4.20</div>
+            <h2 class="slide-title">讀者信函摘錄：笑納人生的生命讚歌</h2>
+            <p class="slide-desc">在繁雜紅塵中，讀者寄給周易老師的隻字片語，構築了整座生命寶塔最動人、最熠熠生輝的真實見證：</p>
+            <div class="highlight-quote">
+              「讀完這本書，我哭了一整夜。那不是委屈的淚水，而是我那顆被利益、面子包裹了幾十年的自私靈魂，終於被聖賢的慈悲真誠所照亮，重獲新生的喜悅之淚。謝謝您，讓我學會了如何從容而行，笑納人生！」 —— 讀者林先生
+            </div>
+            <div class="highlight-quote" style="margin-top:0.8rem;">
+              「以前我覺得命運是冰冷的鐵籠，每天都在焦慮無常中戰戰兢兢。現在我明白了，只要我的心是安定的、無私的，生與死便沒了分別，皆大歡喜。我終於找到了靈魂的港灣。」 —— 讀者趙女士
+            </div>
+          </div>
+          <div class="slide-right">
+            <div class="value-balance-box">
+              <div class="value-card objective" style="border-color: var(--primary);">
+                <h3>生命自覺的禮讚</h3>
+                <p style="line-height:1.6; color:var(--text-main);">讀者的每一封來信，都是真理在人間流淌的活見證。這份感動與智慧，將伴隨著這份簡報，代代相傳，啟迪更多迷惘的心靈。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 70: 結語 -->
+      <div class="slide" data-slide-index="70" data-part-group="part5">
         <div class="slide-card">
           <div class="cover-content">
             <div class="slide-category">總結與傳承</div>
-            <h1 class="cover-title" style="font-size: 3.2rem; background: linear-gradient(135deg, #fff 0%, #a78bfa 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">生與死兩安，萬法皆安心</h1>
-            <p class="cover-subtitle" style="font-size: 1.4rem; margin-bottom: 2rem;">笑納人生，從容而行</p>
-            <p class="cover-desc" style="max-width: 780px; margin-bottom: 2.2rem; line-height: 1.6;">「夫子之道，忠恕而已矣。」從安心的體悟出發，透過立命自省、徹底從心上改過、廣行陰德陽善，並在生命的各個階段持守謙卑品格。當我們將這份「無私利他」的大安心貫通人生一切順逆境界時，生與死皆能安詳坦然。這便是儒釋道千百年來最平實、最慈悲的智慧結晶，引導我們在人間從容而行。祝福您，生命的寶塔巍然聳立，笑納人生，心安自在！</p>
-            <span class="cover-author" style="background: rgba(139, 92, 246, 0.1); border-color: rgba(139, 92, 246, 0.2); color: var(--primary);">全書 50 節深度導覽演示完畢 感謝聆聽</span>
+            <h1 class="cover-title" style="font-size: 3.2rem; background: linear-gradient(135deg, #0f172a 0%, #0284c7 50%, #0d9488 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">生死兩安，從容而行</h1>
+            <p class="cover-subtitle" style="font-size: 1.4rem; margin-bottom: 2rem;">笑納人生，萬法皆安心</p>
+            <p class="cover-desc" style="max-width: 780px; margin-bottom: 2.2rem; line-height: 1.6; color: var(--text-muted);">「夫子之道，忠恕而已矣。」從安心的體悟出發，透過立命自省、徹底從心上改過、廣行陰德陽善，並在生命的各個階段持守謙卑品格。當我們將這份「無私利他」的大安心貫通人生一切順逆境界時，生與死皆能安詳坦然。這便是儒釋道千百年來最平實、最慈悲的智慧結晶，引導我們在人間從容而行。祝福您，生命的寶塔巍然聳立，笑納人生，心安自在！</p>
+            <span class="cover-author" style="background: rgba(14, 165, 233, 0.08); border-color: rgba(14, 165, 233, 0.18); color: var(--primary);">全書 70 節深度導覽演示完畢 感謝聆聽</span>
           </div>
         </div>
       </div>
@@ -2719,7 +3403,7 @@
     </div>
   </div>
 
-  <script>
+    <script>
     const slides = document.querySelectorAll('.slide');
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
@@ -2735,12 +3419,12 @@
     let currentSlide = 0;
     const totalSlides = slides.length;
 
-    // Dynamically initialized 50 slides
+    // Dynamically initialized 70 slides
     const slideTitles = [
       "從容而行 (封面)",
       "前言：功利時代心靈荒原",
       "1.1 物欲與快樂隱形對立",
-      "1.2 女性快樂指數Paradox",
+      "1.2 女性快樂指數 Paradox",
       "1.3 心靈指標之首：安心",
       "1.4 安心與功利社會危機",
       "1.5 憂鬱盛行率數據警示",
@@ -2786,7 +3470,26 @@
       "3.6 晚年養道 (傳承與笑納)",
       "3.7 實踐門徑：奉行忠與恕",
       "3.8 極致內省：不遷怒不貳過",
-      "3.9 讀者迴響與行深見證",
+      "4.1 讀者回響前言：真理生命實踐",
+      "4.2 案例一：企業高管的心上改過",
+      "4.3 案例二：憂鬱症患者的安心港灣",
+      "4.4 案例三：焦慮母親的育兒奇蹟",
+      "4.5 案例四：經典教育的童蒙養正",
+      "4.6 案例五：迷惘少年的養志覺醒",
+      "4.7 案例六：企業領袖的成年養德",
+      "4.8 案例七：空巢老人的晚年養道",
+      "4.9 案例八：重病患者的生死大安心",
+      "4.10 案例九：調解員的「恕道」實踐",
+      "4.11 案例十：創客的顏回省心功夫",
+      "4.12 綜述一：家庭關係的春天",
+      "4.13 綜述二：財富與金錢觀的淨化",
+      "4.14 綜述三：校園品格美學萌芽",
+      "4.15 綜述四：焦慮社會的避暑山莊",
+      "4.16 行深見證一：功過格本機實踐",
+      "4.17 行深見證二：利他健康奇蹟",
+      "4.18 行深見證三：謙德與商業防腐",
+      "4.19 行深見證四：福田不離方寸",
+      "4.20 信函選錄：笑納人生讚歌",
       "生死兩安，從容而行 (結語)"
     ];
 
@@ -2813,17 +3516,31 @@
       });
     }
 
-    // Switch tab filtering
+    // Switch tab filtering and JUMPING
     tabButtons.forEach(button => {
       button.addEventListener('click', (e) => {
         tabButtons.forEach(btn => btn.classList.remove('active'));
         button.classList.add('active');
         
         const part = button.getAttribute('data-part');
+        
+        // 1. Filter the left drawer list
         if (part === 'all') {
           buildDrawerList('all');
         } else {
           buildDrawerList(part);
+        }
+
+        // 2. Quick Jump to the first slide of the clicked section
+        let jumpIndex = -1;
+        if (part === 'part1') jumpIndex = 0;        // Slide 1 (index 0)
+        else if (part === 'part2') jumpIndex = 17;   // Slide 18 (index 17)
+        else if (part === 'part3') jumpIndex = 41;   // Slide 42 (index 41)
+        else if (part === 'part4') jumpIndex = 49;   // Slide 50 (index 49)
+        else if (part === 'part5') jumpIndex = 69;   // Slide 70 (index 69)
+
+        if (jumpIndex !== -1) {
+          goToSlide(jumpIndex);
         }
       });
     });
@@ -2866,8 +3583,10 @@
         targetPart = 'part2';
       } else if (currentSlide >= 41 && currentSlide <= 48) {
         targetPart = 'part3';
-      } else if (currentSlide >= 49) {
+      } else if (currentSlide >= 49 && currentSlide <= 68) {
         targetPart = 'part4';
+      } else if (currentSlide >= 69) {
+        targetPart = 'part5';
       }
       
       tabButtons.forEach(btn => {
@@ -2906,6 +3625,7 @@
       drawerOverlay.classList.add('open');
     }
 
+    // Auto close
     function closeDrawer() {
       drawer.classList.remove('open');
       drawerOverlay.classList.remove('open');
