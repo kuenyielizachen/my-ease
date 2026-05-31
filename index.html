@@ -994,6 +994,20 @@
       border-radius: 4px 0 0 4px;
       z-index: 5;
     }
+
+    /* Fix for native colorful emojis in gradient text */
+    .emoji-color {
+      background: none !important;
+      -webkit-background-clip: initial !important;
+      background-clip: initial !important;
+      -webkit-text-fill-color: initial !important;
+      text-fill-color: initial !important;
+      color: initial !important;
+      display: inline-block;
+      vertical-align: middle;
+      font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", sans-serif;
+      margin-left: 0.35rem;
+    }
   </style>
 </head>
 <body>
@@ -1032,7 +1046,7 @@
         <div class="slide-card split">
           <div class="slide-left" style="align-items: flex-start; text-align: left; padding-right: 0;">
             <div class="cover-content" style="align-items: flex-start; text-align: left; max-width: 100%; margin: 0;">
-              <h1 class="cover-title" style="font-size: 3.8rem; text-align: left; margin-left: 0; background: linear-gradient(135deg, #0f172a 10%, #0284c7 50%, #0d9488 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">從容而行 ⛵</h1>
+              <h1 class="cover-title" style="font-size: 3.8rem; text-align: left; margin-left: 0; background: linear-gradient(135deg, #0f172a 10%, #0284c7 50%, #0d9488 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">從容而行 <span class="emoji-color">⛵</span></h1>
               <p class="cover-subtitle" style="font-size: 1.5rem; text-align: left; margin-left: 0; margin-bottom: 1.5rem; letter-spacing: 2px;">笑納人生的智慧與心靈安頓</p>
               <span class="cover-author" style="margin-left: 0; margin-bottom: 1.5rem;">周易 講述 / 拙雲 劉尚寂 整理</span>
               <p class="cover-desc" style="text-align: left; max-width: 100%; margin-top: 0.5rem; font-size: 0.95rem; line-height: 1.6;">本簡報將全書共計 3 大單元細分為 70 張極緻細節投影片。透過精心設計的內容框架、經典引文與實證理路，帶領您完整領悟「儒、釋、道」融通一體的生命安頓之道。</p>
@@ -1053,7 +1067,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">⚓ 單元一：開顯無盡藏 | 前言</div>
-            <h2 class="slide-title">前言：功利時代的心靈荒漠 🏜️</h2>
+            <h2 class="slide-title">前言：功利時代的心靈荒漠 <span class="emoji-color">🏜️</span></h2>
             <p class="slide-desc">當今社會看似物質極度充裕、科技日新月異。我們擁有飛速的交通、便利的網絡和豐富的消費享受。然而，一個巨大的反差擺在眼前：**現代人似乎比過去更累、更空虛、更缺乏安全感。**</p>
             <div class="features-list">
               <div class="feature-item">
@@ -1081,7 +1095,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">⚓ 單元一：開顯無盡藏 | 1.1</div>
-            <h2 class="slide-title">物欲與快樂的隱形對立 🛒</h2>
+            <h2 class="slide-title">物欲與快樂的隱形對立 <span class="emoji-color">🛒</span></h2>
             <p class="slide-desc">多數人潛意識中有一種未經省思的信念：「只要擁有更多的財富，享受更奢華、更便利的物質生活，我就能獲得真正的快樂。」</p>
             <div class="features-list">
               <div class="feature-item">
@@ -1116,7 +1130,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">⚓ 單元一：開顯無盡藏 | 1.2</div>
-            <h2 class="slide-title">女性快樂指數的Paradox研究 📊</h2>
+            <h2 class="slide-title">女性快樂指數的Paradox研究 <span class="emoji-color">📊</span></h2>
             <p class="slide-desc">書中引入了一項極具實證意義的西方社會學研究：一九七〇年代起，美國女性在法律權益、薪資待遇、就業與教育自由上，均取得了極大的提升。然而，她們的「自覺快樂指數」卻呈現逐年下滑的趨勢。</p>
             <div class="features-list">
               <div class="feature-item">
@@ -1144,7 +1158,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">⚓ 單元一：開顯無盡藏 | 1.3</div>
-            <h2 class="slide-title">心靈指標之首：安心 ⚓</h2>
+            <h2 class="slide-title">心靈指標之首：安心 <span class="emoji-color">⚓</span></h2>
             <p class="slide-desc">心靈品質的真實指標在於「安心」。當我們卸下世俗的偽裝，回歸深夜的靜謐，捫心自問：「我的心此時是安定的嗎？還是充滿了徨惑、擔憂與焦躁？」</p>
             <div class="features-list">
               <div class="feature-item">
@@ -1180,7 +1194,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">⚓ 單元一：開顯無盡藏 | 1.4</div>
-            <h2 class="slide-title">安心的基礎與現代社會危機 ⚠️</h2>
+            <h2 class="slide-title">安心的基礎與現代社會危機 <span class="emoji-color">⚠️</span></h2>
             <p class="slide-desc">心靈不寧是目前現代社會普遍存在的現象。為了生存和在競爭中立足，人人都被要求不斷向前狂奔。這種被動狂奔的根源在於「深刻的內在不安」。</p>
             <div class="features-list">
               <div class="feature-item">
@@ -1215,7 +1229,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">⚓ 單元一：開顯無盡藏 | 1.5</div>
-            <h2 class="slide-title">憂鬱症盛行率的數據警示 🚨</h2>
+            <h2 class="slide-title">憂鬱症盛行率的數據警示 <span class="emoji-color">🚨</span></h2>
             <p class="slide-desc">心靈不安最冰冷、最無可辯駁的社會證物，就是抑鬱與憂鬱患者數量的幾何級數增长。數據背後代表著無數破碎徬徨的靈魂：</p>
             <div class="features-list">
               <div class="feature-item">
@@ -1250,7 +1264,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">⚓ 單元一：開顯無盡藏 | 1.6</div>
-            <h2 class="slide-title">台大生與碩博士自戕案的深思 🕯️</h2>
+            <h2 class="slide-title">台大生與碩博士自戕案的深思 <span class="emoji-color">🕯️</span></h2>
             <p class="slide-desc">書中列舉了數個讓人扼腕嘆息的真實自戕案例，血淋淋地揭示了「外在才幹優秀」與「心靈安頓能力」毫無正相關：</p>
             <div class="features-list">
               <div class="feature-item">
@@ -1285,7 +1299,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">⚓ 單元一：開顯無盡藏 | 1.7</div>
-            <h2 class="slide-title">什麼是「主觀的人生價值」？ 👤</h2>
+            <h2 class="slide-title">什麼是「主觀的人生價值」？ <span class="emoji-color">👤</span></h2>
             <p class="slide-desc">為了定位生命的航向，我們必須細心分辨人生價值的方向。首先是「主觀的人生價值」：</p>
             <div class="features-list">
               <div class="feature-item">
@@ -1320,7 +1334,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">⚓ 單元一：開顯無盡藏 | 1.8</div>
-            <h2 class="slide-title">主觀人生價值的宿命與脆弱性 🍂</h2>
+            <h2 class="slide-title">主觀人生價值的宿命與脆弱性 <span class="emoji-color">🍂</span></h2>
             <p class="slide-desc">當一個人的自我價值完全依附於主觀的「外物滿足」時，其生命就具備了極度致命的脆弱性：</p>
             <div class="features-list">
               <div class="feature-item">
@@ -1355,7 +1369,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">⚓ 單元一：開顯無盡藏 | 1.9</div>
-            <h2 class="slide-title">什麼是「客觀的人生價值」？ 🌍</h2>
+            <h2 class="slide-title">什麼是「客觀的人生價值」？ <span class="emoji-color">🌍</span></h2>
             <p class="slide-desc">與脆弱狹隘的主觀價值相對，存在著能禁得起歷史考驗、被人類社會公眾所推崇推敬的「客觀人生價值」：</p>
             <div class="features-list">
               <div class="feature-item">
@@ -1390,7 +1404,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">⚓ 單元一：開顯無盡藏 | 1.10</div>
-            <h2 class="slide-title">德蕾莎修女無私奉獻的不朽典範 🌹</h2>
+            <h2 class="slide-title">德蕾莎修女無私奉獻的不朽典範 <span class="emoji-color">🌹</span></h2>
             <p class="slide-desc">書中以舉世敬仰的德蕾莎修女作為客觀人生的不朽標竿，深刻啟迪生命的寬度與廣度：</p>
             <div class="features-list">
               <div class="feature-item">
@@ -1426,7 +1440,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">⚓ 單元一：開顯無盡藏 | 1.11</div>
-            <h2 class="slide-title">客觀價值實踐綱領一：幫助迷惑者覺醒 💡</h2>
+            <h2 class="slide-title">客觀價值實踐綱領一：幫助迷惑者覺醒 <span class="emoji-color">💡</span></h2>
             <p class="slide-desc">客觀價值的實踐絕非抽象口號，可具體歸納為兩大根本綱要。第一項核心使命便是「啟迪迷途中的心靈」：</p>
             <div class="features-list">
               <div class="feature-item">
@@ -1461,7 +1475,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">⚓ 單元一：開顯無盡藏 | 1.12</div>
-            <h2 class="slide-title">客觀價值實踐綱領二：幫助苦難者解脫 🤝</h2>
+            <h2 class="slide-title">客觀價值實踐綱領二：幫助苦難者解脫 <span class="emoji-color">🤝</span></h2>
             <p class="slide-desc">客觀價值的第二項實踐綱領，是極具實踐溫度的「濟危扶困、解除眾生實質痛苦」：</p>
             <div class="features-list">
               <div class="feature-item">
@@ -1497,7 +1511,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">⚓ 單元一：開顯無盡藏 | 1.13</div>
-            <h2 class="slide-title">知識的本質：精明與向外馳求 ⚙️</h2>
+            <h2 class="slide-title">知識的本質：精明與向外馳求 <span class="emoji-color">⚙️</span></h2>
             <p class="slide-desc">為了進一步掃除心靈盲點，作者對「知識」與「智慧」的分野進行了甚深辨析。首先是「知識」的性質：</p>
             <div class="features-list">
               <div class="feature-item">
@@ -1532,7 +1546,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">⚓ 單元一：開顯無盡藏 | 1.14</div>
-            <h2 class="slide-title">智慧的本質：高明與向內自省 ✨</h2>
+            <h2 class="slide-title">智慧的本質：高明與向內自省 <span class="emoji-color">✨</span></h2>
             <p class="slide-desc">與局限於技術的知識不同，生命的「智慧」是關乎我們整個靈魂品質洗滌、淨化與提升的最高學問：</p>
             <div class="features-list">
               <div class="feature-item">
@@ -1567,7 +1581,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">⚓ 單元一：開顯無盡藏 | 1.15</div>
-            <h2 class="slide-title">德者才之主：上品、毒品的深刻譬喻 ⚖️</h2>
+            <h2 class="slide-title">德者才之主：上品、毒品的深刻譬喻 <span class="emoji-color">⚖️</span></h2>
             <p class="slide-desc">「才」代表能力才華；「德」代表品德修養。才華猶如家中的僕人，品德才是家中的主人。僕人再有能力，也必須聽命於忠厚的主人，否則必生大亂。</p>
             <div class="highlight-quote">
               「德者，才之主也；才者，德之奴也。有才無德，幾何不魍魎猖狂？」 ——《菜根譚》
@@ -1606,7 +1620,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">📖 單元二：了凡四訓 | 2.1</div>
-            <h2 class="slide-title">《了凡四訓》：中日兩國的齊家改命寶典 📖</h2>
+            <h2 class="slide-title">《了凡四訓》：中日兩國的齊家改命寶典 <span class="emoji-color">📖</span></h2>
             <p class="slide-desc">簡報第二部分進入核心單元：明朝袁了凡先生留給子孫的四篇大智慧家書，被世人尊為「改造命運的經典之作」。</p>
             <div class="features-list">
               <div class="feature-item">
@@ -1641,7 +1655,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">📖 單元二：了凡四訓 | 2.1.2</div>
-            <h2 class="slide-title">袁了凡童年放棄科舉與改學醫術 🎓</h2>
+            <h2 class="slide-title">袁了凡童年放棄科舉與改學醫術 <span class="emoji-color">🎓</span></h2>
             <p class="slide-desc">了凡先生（原名袁黃，字坤儀）在年幼時便面臨人生的第一個重大抉擇：</p>
             <div class="features-list">
               <div class="feature-item">
@@ -1676,7 +1690,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">📖 單元二：了凡四訓 | 2.1.3</div>
-            <h2 class="slide-title">慈雲寺偶遇神仙相士孔先生 🔮</h2>
+            <h2 class="slide-title">慈雲寺偶遇神仙相士孔先生 <span class="emoji-color">🔮</span></h2>
             <p class="slide-desc">有一天，袁了凡來到本地的慈雲寺遊玩，偶然在寺廟門口遇見了一位氣宇非凡、飄逸若仙的老先生：</p>
             <div class="features-list">
               <div class="feature-item">
@@ -1711,7 +1725,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">📖 單元二：了凡四訓 | 2.1.4</div>
-            <h2 class="slide-title">孔先生極其精準的命運定數預測 📅</h2>
+            <h2 class="slide-title">孔先生極其精準的命運定數預測 <span class="emoji-color">📅</span></h2>
             <p class="slide-desc">在之後的二十年間，孔先生對袁了凡的所有生活預測，其精準程度簡直到了匪夷所思、分毫不差的地步：</p>
             <div class="features-list">
               <div class="feature-item">
@@ -1746,7 +1760,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">📖 單元二：了凡四訓 | 2.1.5</div>
-            <h2 class="slide-title">棲霞山與雲谷禪師的三日對坐 🧘</h2>
+            <h2 class="slide-title">棲霞山與雲谷禪師的三日對坐 <span class="emoji-color">🧘</span></h2>
             <p class="slide-desc">了凡在前往南京國子監讀書的途中，特地前往棲霞山拜訪著名的禪門德高望重的「雲谷禪師」。</p>
             <div class="features-list">
               <div class="feature-item">
@@ -1782,7 +1796,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">📖 單元二：了凡四訓 | 2.1.6</div>
-            <h2 class="slide-title">雲谷禪師痛斥凡夫與開導立命之理 ⚡</h2>
+            <h2 class="slide-title">雲谷禪師痛斥凡夫與開導立命之理 <span class="emoji-color">⚡</span></h2>
             <p class="slide-desc">雲谷禪師聽完了凡的回答，忍不住哈哈大笑，隨即厲聲喝醒了他的死水心：</p>
             <div class="features-list">
               <div class="feature-item">
@@ -1818,7 +1832,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">📖 單元二：了凡四訓 | 2.1.7</div>
-            <h2 class="slide-title">禪宗「一切福田不離方寸」的思想融通 🌱</h2>
+            <h2 class="slide-title">禪宗「一切福田不離方寸」的思想融通 <span class="emoji-color">🌱</span></h2>
             <p class="slide-desc">雲谷禪師的改命開示，深度融合了禪宗六祖惠能大師的直指本心，為儒家「立命說」注入了甚深靈性活水：</p>
             <div class="highlight-quote">
               「一切福田，不離方寸；從心而覓，感無不通。」 ——《六祖壇經》
@@ -1856,7 +1870,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">📖 單元二：了凡四訓 | 2.2.1</div>
-            <h2 class="slide-title">改過之法：轉禍為福的真實起點 🔄</h2>
+            <h2 class="slide-title">改過之法：轉禍為福的真實起點 <span class="emoji-color">🔄</span></h2>
             <p class="slide-desc">了凡大受啟發，當即痛切懺悔自身過失，改名為「了凡」（意即從此了解命運，跳脫凡俗）。他明白，改命第一步是徹底改過：</p>
             <div class="features-list">
               <div class="feature-item">
@@ -1891,7 +1905,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">📖 單元二：了凡四訓 | 2.2.2</div>
-            <h2 class="slide-title">改過三心之一：知恥心 😳</h2>
+            <h2 class="slide-title">改過三心之一：知恥心 <span class="emoji-color">😳</span></h2>
             <p class="slide-desc">了凡指出，立志改過的第一個動力，是必須真誠發起「羞恥心」：</p>
             <div class="features-list">
               <div class="feature-item">
@@ -1927,7 +1941,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">📖 單元二：了凡四訓 | 2.2.3</div>
-            <h2 class="slide-title">改過三心之二：敬畏心 🛐</h2>
+            <h2 class="slide-title">改過三心之二：敬畏心 <span class="emoji-color">🛐</span></h2>
             <p class="slide-desc">改過的第二個動力，是必須時時心存「敬畏之心」：</p>
             <div class="features-list">
               <div class="feature-item">
@@ -1962,7 +1976,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">📖 單元二：了凡四訓 | 2.2.4</div>
-            <h2 class="slide-title">改過三心之三：勇猛心 🔥</h2>
+            <h2 class="slide-title">改過三心之三：勇猛心 <span class="emoji-color">🔥</span></h2>
             <p class="slide-desc">有了知恥與敬畏，最後必須徹底發揮實踐的動力——「勇猛之心」：</p>
             <div class="features-list">
               <div class="feature-item">
@@ -1998,7 +2012,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">📖 單元二：了凡四訓 | 2.2.5</div>
-            <h2 class="slide-title">改過三個修持層次之一：事上改 🧹</h2>
+            <h2 class="slide-title">改過三個修持層次之一：事上改 <span class="emoji-color">🧹</span></h2>
             <p class="slide-desc">了凡先生將改正過失的手法分為三個高下截然不同的境界。首先是凡俗最常用的「從事上改過之法」：</p>
             <div class="features-list">
               <div class="feature-item">
@@ -2033,7 +2047,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">📖 單元二：了凡四訓 | 2.2.6</div>
-            <h2 class="slide-title">改過三個修持層次之二：理上改 🧠</h2>
+            <h2 class="slide-title">改過三個修持層次之二：理上改 <span class="emoji-color">🧠</span></h2>
             <p class="slide-desc">比強制克制高明許多的，是「從理上究明道理，順理而改之」：</p>
             <div class="features-list">
               <div class="feature-item">
@@ -2068,7 +2082,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">📖 單元二：了凡四訓 | 2.2.7</div>
-            <h2 class="slide-title">改過三個層次之三：心上改 (最上乘) 🤍</h2>
+            <h2 class="slide-title">改過三個層次之三：心上改 (最上乘) <span class="emoji-color">🤍</span></h2>
             <p class="slide-desc">改過最究竟、最上乘的無上妙法，在於「從心上正本清源、心正意誠」：</p>
             <div class="highlight-quote">
               「過由心生，亦由心改。如斬毒樹，先斷其根，何必一枝一枝去剪，一葉一葉去摘呢？」
@@ -2099,7 +2113,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">📖 單元二：了凡四訓 | 2.3.1</div>
-            <h2 class="slide-title">積善之方：用智慧明辨善惡之「真偽」 🔍</h2>
+            <h2 class="slide-title">積善之方：用智慧明辨善惡之「真偽」 <span class="emoji-color">🔍</span></h2>
             <p class="slide-desc">改正了過失，便能大步踏入「積善培德」的廣闊天地。但奉行善法事理精微，必須以智慧明辨。首先是「真善與假善」的精闢區分：</p>
             <div class="features-list">
               <div class="feature-item">
@@ -2135,7 +2149,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">📖 單元二：了凡四訓 | 2.3.2</div>
-            <h2 class="slide-title">積善之方：明辨善惡之「陰與陽」 🤫</h2>
+            <h2 class="slide-title">積善之方：明辨善惡之「陰與陽」 <span class="emoji-color">🤫</span></h2>
             <p class="slide-desc">積善培德中，另一個對後世子孫福報影響深遠的關鍵，是辨明「陰德」與「陽善」：</p>
             <div class="features-list">
               <div class="feature-item">
@@ -2170,7 +2184,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">📖 單元二：了凡四訓 | 2.3.3</div>
-            <h2 class="slide-title">積善之方：明辨「端曲、偏正與半滿」 ⚖️</h2>
+            <h2 class="slide-title">積善之方：明辨「端曲、偏正與半滿」 <span class="emoji-color">⚖️</span></h2>
             <p class="slide-desc">行善事理極微。為了與宇宙真理相應，我們還必須以智慧仔細剖析以下差別：</p>
             <div class="features-list">
               <div class="feature-item">
@@ -2206,7 +2220,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">📖 單元二：了凡四訓 | 2.3.4</div>
-            <h2 class="slide-title">隨緣濟眾善行之一：與人為善 🤝</h2>
+            <h2 class="slide-title">隨緣濟眾善行之一：與人為善 <span class="emoji-color">🤝</span></h2>
             <p class="slide-desc">了凡先生將日常濟眾善行歸納為十條大綱。第一項便是涵養極高的「與人為善」：</p>
             <div class="features-list">
               <div class="feature-item">
@@ -2241,7 +2255,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">📖 單元二：了凡四訓 | 2.3.5</div>
-            <h2 class="slide-title">隨緣濟眾善行之二：愛敬存心 💖</h2>
+            <h2 class="slide-title">隨緣濟眾善行之二：愛敬存心 <span class="emoji-color">💖</span></h2>
             <p class="slide-desc">十條善行大綱的第二項，是將慈悲徹底融入骨血的「愛敬存心」：</p>
             <div class="features-list">
               <div class="feature-item">
@@ -2276,7 +2290,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">📖 單元二：了凡四訓 | 2.3.6</div>
-            <h2 class="slide-title">隨緣濟眾：成人之美與勸人為善 🌸</h2>
+            <h2 class="slide-title">隨緣濟眾：成人之美與勸人為善 <span class="emoji-color">🌸</span></h2>
             <p class="slide-desc">第三與第四條大綱是極具道德風尚建設的「成人之美」與「勸人為善」：</p>
             <div class="features-list">
               <div class="feature-item">
@@ -2311,7 +2325,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">📖 單元二：了凡四訓 | 2.3.7</div>
-            <h2 class="slide-title">隨緣濟眾：救人危急與興建大利 🏥</h2>
+            <h2 class="slide-title">隨緣濟眾：救人危急與興建大利 <span class="emoji-color">🏥</span></h2>
             <p class="slide-desc">第五與第六條大綱是關乎生計與福祉的「救人危急」與「興建大利」：</p>
             <div class="features-list">
               <div class="feature-item">
@@ -2346,7 +2360,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">📖 單元二：了凡四訓 | 2.3.8</div>
-            <h2 class="slide-title">隨緣濟眾：捨財、護法、敬長與愛物 🎁</h2>
+            <h2 class="slide-title">隨緣濟眾：捨財、護法、敬長與愛物 <span class="emoji-color">🎁</span></h2>
             <p class="slide-desc">十條善行大綱的最後四項，是健全生活性靈與生態和諧的完備實踐：</p>
             <div class="features-list" style="max-height:380px; overflow-y:auto; padding-right:0.5rem;">
               <div class="feature-item">
@@ -2395,7 +2409,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">📖 單元二：了凡四訓 | 2.4</div>
-            <h2 class="slide-title">謙德之效：為什麼謙卦六爻皆吉？ ⛰️</h2>
+            <h2 class="slide-title">謙德之效：為什麼謙卦六爻皆吉？ <span class="emoji-color">⛰️</span></h2>
             <p class="slide-desc">了凡四訓的最後一訓是「謙德之效」。易經六十四卦中吉凶參半，唯獨「謙卦」是六爻皆吉、大吉大利，為什麼？</p>
             <div class="features-list">
               <div class="feature-item">
@@ -2431,7 +2445,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">🪜 單元三：終生美學 | 3.1</div>
-            <h2 class="slide-title">五階段人生品格與智慧教育願景 🪜</h2>
+            <h2 class="slide-title">五階段人生品格與智慧教育願景 <span class="emoji-color">🪜</span></h2>
             <p class="slide-desc">簡報第三單元進入：終生人格美學的品格與智慧教育藍圖。作者參酌古今，將心靈教育細分為五個黃金成長階段：</p>
             <div class="features-list">
               <div class="feature-item">
@@ -2466,7 +2480,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">🪜 單元三：終生美學 | 3.2</div>
-            <h2 class="slide-title">第一階段：幼兒養性 (0-3歲：最純底片) 👶</h2>
+            <h2 class="slide-title">第一階段：幼兒養性 (0-3歲：最純底片) <span class="emoji-color">👶</span></h2>
             <p class="slide-desc">零歲至三歲是人一生中心靈可塑性最高、無意識直覺吸收力最強的時期。此時幼兒尚無任何邏輯辨析：</p>
             <div class="features-list">
               <div class="feature-item">
@@ -2502,7 +2516,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">🪜 單元三：終生美學 | 3.3</div>
-            <h2 class="slide-title">第二階段：童蒙養正 (4-13歲：經典植入) 📚</h2>
+            <h2 class="slide-title">第二階段：童蒙養正 (4-13歲：經典植入) <span class="emoji-color">📚</span></h2>
             <p class="slide-desc">四歲至十三歲是人記憶力最強、理解力尚未成熟的獨特發展期。此時的心性最適合植入聖賢基因：</p>
             <div class="features-list">
               <div class="feature-item">
@@ -2537,7 +2551,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">🪜 單元三：終生美學 | 3.4</div>
-            <h2 class="slide-title">第三階段：少年養志 (13歲後：大志胸懷) 🚀</h2>
+            <h2 class="slide-title">第三階段：少年養志 (13歲後：大志胸懷) <span class="emoji-color">🚀</span></h2>
             <p class="slide-desc">十三歲進入青春期，獨立人格與理解力迅速提升，志向的確立成為此階段靈魂開展的關鍵任務：</p>
             <div class="features-list">
               <div class="feature-item">
@@ -2573,7 +2587,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">🪜 單元三：終生美學 | 3.5</div>
-            <h2 class="slide-title">第四階段：成年養德 (職場歷事修身) 💼</h2>
+            <h2 class="slide-title">第四階段：成年養德 (職場歷事修身) <span class="emoji-color">💼</span></h2>
             <p class="slide-desc">步入成年，我們投身於千差萬別的職場與社會洪流中。職場絕非冰冷的謀生工具，而是我們修身培德的絕佳道場：</p>
             <div class="features-list">
               <div class="feature-item">
@@ -2608,7 +2622,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">🪜 單元三：終生美學 | 3.6</div>
-            <h2 class="slide-title">第五階段：晚年養道 (笑納與傳承) 🌅</h2>
+            <h2 class="slide-title">第五階段：晚年養道 (笑納與傳承) <span class="emoji-color">🌅</span></h2>
             <p class="slide-desc">歲月沉澱，晚年是人生的至臻成熟與收穫期。放下世俗的功名得失與成敗紛擾，將生命的重心全然回歸心靈性靈的安頓：</p>
             <div class="features-list">
               <div class="feature-item">
@@ -2644,7 +2658,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">🪜 單元三：終生美學 | 3.7</div>
-            <h2 class="slide-title">實踐入道門徑：奉行忠與恕 🎯</h2>
+            <h2 class="slide-title">實踐入道門徑：奉行忠與恕 <span class="emoji-color">🎯</span></h2>
             <p class="slide-desc">聖賢的大智慧並非高不可攀。入道入德的法門極其簡易，人人可在日常起心動念與人際交往中踏實奉行「忠恕」：</p>
             <div class="features-list">
               <div class="feature-item">
@@ -2679,7 +2693,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">🪜 單元三：終生美學 | 3.8</div>
-            <h2 class="slide-title">極致內省的顏回功夫：不遷怒，不貳過 🧹</h2>
+            <h2 class="slide-title">極致內省的顏回功夫：不遷怒，不貳過 <span class="emoji-color">🧹</span></h2>
             <p class="slide-desc">書中對「不遷怒，不貳過」進行了精微了義的重新定義，這是生命覺醒者極致的內省功夫：</p>
             <div class="features-list">
               <div class="feature-item">
@@ -2714,7 +2728,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">🪜 單元三：終生美學 | 3.9</div>
-            <h2 class="slide-title">讀者共鳴與讀後迴響之見證 📣</h2>
+            <h2 class="slide-title">讀者共鳴與讀後迴響之見證 <span class="emoji-color">📣</span></h2>
             <p class="slide-desc">《從容而行》出版後，在社會各行各業中激起了極其深刻的靈性共鳴與反響。無數被焦慮、徬徨所折磨的讀者，從中找到了安頓生命的力量：</p>
             <div class="features-list">
               <div class="feature-item">
@@ -2749,7 +2763,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">✨ 單元四：行深見證與讀者回響 | 前言</div>
-            <h2 class="slide-title">讀者回響前言：真理的生命實踐與見證 ✨</h2>
+            <h2 class="slide-title">讀者回響前言：真理的生命實踐與見證 <span class="emoji-color">✨</span></h2>
             <p class="slide-desc">《從容而行：笑納人生的智慧》出版後，在全台乃至全球華人讀者圈中，引發了巨大的迴響。讀者們表示，在高度競爭、功利取向的現代都市中，這本書宛如一劑心靈清涼藥，解救了他們焦慮枯竭的靈魂。</p>
             <div class="features-list">
               <div class="feature-item">
@@ -2777,7 +2791,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">✨ 單元四：行深見證與讀者回響 | 4.2</div>
-            <h2 class="slide-title">案例一：企業經理人的「心上改過」與職場和諧 🧹</h2>
+            <h2 class="slide-title">案例一：企業經理人的「心上改過」與職場和諧 <span class="emoji-color">🧹</span></h2>
             <p class="slide-desc">某上市科技公司總經理李先生，分享了他實踐「心上改過」的痛苦與蛻變：</p>
             <div class="features-list">
               <div class="feature-item">
@@ -2812,7 +2826,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">✨ 單元四：行深見證與讀者回響 | 4.3</div>
-            <h2 class="slide-title">案例二：憂鬱症患者重尋心靈安心之港灣 ⚓</h2>
+            <h2 class="slide-title">案例二：憂鬱症患者重尋心靈安心之港灣 <span class="emoji-color">⚓</span></h2>
             <p class="slide-desc">一位長期飽受重度焦慮與憂鬱折磨的年輕讀者陳小姐，寄來了她的感人來信：</p>
             <div class="features-list">
               <div class="feature-item">
@@ -2847,7 +2861,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">✨ 單元四：行深見證與讀者回響 | 4.4</div>
-            <h2 class="slide-title">案例三：焦慮母親的「幼兒養性」家庭實驗 👶</h2>
+            <h2 class="slide-title">案例三：焦慮母親的「幼兒養性」家庭實驗 <span class="emoji-color">👶</span></h2>
             <p class="slide-desc">新竹的家庭主婦張媽媽，為了改善家中有高敏感、容易驚恐哭鬧的幼兒，實踐了「幼兒養性」的修持：</p>
             <div class="features-list">
               <div class="feature-item">
@@ -2882,7 +2896,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">✨ 單元四：行深見證與讀者回響 | 4.5</div>
-            <h2 class="slide-title">案例四：國中教師實踐「童蒙養正」經典教育 📚</h2>
+            <h2 class="slide-title">案例四：國中教師實踐「童蒙養正」經典教育 <span class="emoji-color">📚</span></h2>
             <p class="slide-desc">台北某中學導師林老師，在班級中大膽嘗試了經典道德植入實驗：</p>
             <div class="features-list">
               <div class="feature-item">
@@ -2917,7 +2931,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">✨ 單元四：行深見證與讀者回響 | 4.7</div>
-            <h2 class="slide-title">案例五：叛逆少年的「少年養志」心靈覺醒 🚀</h2>
+            <h2 class="slide-title">案例五：叛逆少年的「少年養志」心靈覺醒 <span class="emoji-color">🚀</span></h2>
             <p class="slide-desc">十七歲的青少年小劉，曾是重度沉迷網路遊戲、叛逆厭學、讓父母束手無策的迷茫少年：</p>
             <div class="features-list">
               <div class="feature-item">
@@ -2952,7 +2966,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">✨ 單元四：行深見證與讀者回響 | 4.7</div>
-            <h2 class="slide-title">案例六：企業領袖的「成人養德」與利他誠信 💼</h2>
+            <h2 class="slide-title">案例六：企業領袖的「成人養德」與利他誠信 <span class="emoji-color">💼</span></h2>
             <p class="slide-desc">傳產企業家趙董事長，分享了他在商業大潮中如何把公司當作修行道場 the practice of business:</p>
             <div class="features-list">
               <div class="feature-item">
@@ -2987,7 +3001,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">✨ 單元四：行深見證與讀者回響 | 4.8</div>
-            <h2 class="slide-title">案例七：空巢老人的「晚年養道」與安詳安頓 🌅</h2>
+            <h2 class="slide-title">案例七：空巢老人的「晚年養道」與安詳安頓 <span class="emoji-color">🌅</span></h2>
             <p class="slide-desc">七十二歲的退休公務員沈大爺，兒女皆在國外工作，長期獨居在家，曾感到極度孤獨與虛無：</p>
             <div class="features-list">
               <div class="feature-item">
@@ -3022,7 +3036,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">✨ 單元四：行深見證與讀者回響 | 4.9</div>
-            <h2 class="slide-title">案例八：重病患者面對生死的「死之大安心」 🕯️</h2>
+            <h2 class="slide-title">案例八：重病患者面對生死的「死之大安心」 <span class="emoji-color">🕯️</span></h2>
             <p class="slide-desc">罹患晚期癌症的讀者高先生，在病榻上寄來了一封震撼人心的遺書般的心得：</p>
             <div class="features-list">
               <div class="feature-item">
@@ -3057,7 +3071,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">✨ 單元四：行深見證與讀者回響 | 4.10</div>
-            <h2 class="slide-title">案例九：司法調解員奉行「恕道」的不凡實踐 ⚖️</h2>
+            <h2 class="slide-title">案例九：司法調解員奉行「恕道」的不凡實踐 <span class="emoji-color">⚖️</span></h2>
             <p class="slide-desc">基層法院調解員劉大姐，分享了她如何將「恕道」與「愛敬存心」化作消弭紅塵戾氣的神奇法寶：</p>
             <div class="features-list">
               <div class="feature-item">
@@ -3092,7 +3106,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">✨ 單元四：行深見證與讀者回響 | 4.11</div>
-            <h2 class="slide-title">案例十：創業者的「不遷怒不貳過」反省功夫 🛡️</h2>
+            <h2 class="slide-title">案例十：創業者的「不遷怒不貳過」反省功夫 <span class="emoji-color">🛡️</span></h2>
             <p class="slide-desc">連鎖餐飲創業者吳先生，分享了他在事業面臨危機時，如何以顏回功夫自我洗心：</p>
             <div class="features-list">
               <div class="feature-item">
@@ -3127,7 +3141,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">✨ 單元四：行深見證與讀者回響 | 4.12</div>
-            <h2 class="slide-title">讀者回響綜述一：家庭關係的冰融與春天 💖</h2>
+            <h2 class="slide-title">讀者回響綜述一：家庭關係的冰融與春天 <span class="emoji-color">💖</span></h2>
             <p class="slide-desc">在大量的讀者回信中，「家庭關係的和諧化解」佔據了至關重要的篇幅。許多長年冷戰、瀕臨破碎的家庭因而重獲春天：</p>
             <div class="features-list">
               <div class="feature-item">
@@ -3162,7 +3176,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">✨ 單元四：行深見證與讀者回響 | 4.13</div>
-            <h2 class="slide-title">讀者回響綜述二：工作與金錢觀念的淨化 🛒</h2>
+            <h2 class="slide-title">讀者回響綜述二：工作與金錢觀念的淨化 <span class="emoji-color">🛒</span></h2>
             <p class="slide-desc">許多讀者分享了讀完本書後，徹底改變了他們對工作意義、財富與物欲的病態執著：</p>
             <div class="features-list">
               <div class="feature-item">
@@ -3197,7 +3211,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">✨ 單元四：行深見證與讀者回響 | 4.14</div>
-            <h2 class="slide-title">讀者回響綜述三：校園品格教育的生根與實踐 🏫</h2>
+            <h2 class="slide-title">讀者回響綜述三：校園品格教育的生根與實踐 <span class="emoji-color">🏫</span></h2>
             <p class="slide-desc">全台多所小學、中學與教育機構 of 教職員，在讀完「五階段品格教育」後，自發在校園中推行了品格美學實踐：</p>
             <div class="features-list">
               <div class="feature-item">
@@ -3232,7 +3246,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">✨ 單元四：行深見證與讀者回響 | 4.15</div>
-            <h2 class="slide-title">讀者回響綜述四：焦慮社會中的集體清涼劑 🍧</h2>
+            <h2 class="slide-title">讀者回響綜述四：焦慮社會中的集體清涼劑 <span class="emoji-color">🍧</span></h2>
             <p class="slide-desc">在一個集體浮躁、被不安全感與狂奔焦慮所包圍的現代商業社會中，大批讀者將本書視為「書案上隨時取用的降溫涼水」：</p>
             <div class="features-list">
               <div class="feature-item">
@@ -3260,7 +3274,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">✨ 單元四：行深見證與讀者回響 | 4.16</div>
-            <h2 class="slide-title">行深見證一：知行合一的改命功過格實踐 📝</h2>
+            <h2 class="slide-title">行深見證一：知行合一的改命功過格實踐 <span class="emoji-color">📝</span></h2>
             <p class="slide-desc">多位行持極深的讀者，主動結合 Obsidian 筆記庫與了凡功過格（Ledger of Merit and Demerit），在日常生活中力行改過修身：</p>
             <div class="features-list">
               <div class="feature-item">
@@ -3295,7 +3309,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">✨ 單元四：行深見證與讀者回響 | 4.17</div>
-            <h2 class="slide-title">行深見證二：無私利他對身心靈健康的奇蹟影響 🩺</h2>
+            <h2 class="slide-title">行深見證二：無私利他對身心靈健康的奇蹟影響 <span class="emoji-color">🩺</span></h2>
             <p class="slide-desc">書中對客觀價值的論述，得到了現代醫學與身心靈實踐讀者的驚人實證反響：</p>
             <div class="features-list">
               <div class="feature-item">
@@ -3330,7 +3344,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">✨ 單元四：行深見證與讀者回響 | 4.18</div>
-            <h2 class="slide-title">行深見證三：謙德在現代商業競爭中的防腐劑作用 ⛰️</h2>
+            <h2 class="slide-title">行深見證三：謙德在現代商業競爭中的防腐劑作用 <span class="emoji-color">⛰️</span></h2>
             <p class="slide-desc">多位企業管理層讀者，對「謙卦六爻皆吉」與「保福總閘門」進行了深刻的商業實踐回響：</p>
             <div class="features-list">
               <div class="feature-item">
@@ -3365,7 +3379,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">✨ 單元四：行深見證與讀者回響 | 4.19</div>
-            <h2 class="slide-title">行深見證四：一切福田不離方寸的集體共鳴 ✨</h2>
+            <h2 class="slide-title">行深見證四：一切福田不離方寸的集體共鳴 <span class="emoji-color">✨</span></h2>
             <p class="slide-desc">讀者群體在經歷改過與利他實踐後，對禪宗「福田不離方寸」的思想產生了石破天驚的集體感通與共鳴：</p>
             <div class="features-list">
               <div class="feature-item">
@@ -3393,7 +3407,7 @@
         <div class="slide-card split">
           <div class="slide-left">
             <div class="slide-category">✨ 單元四：行深見證與讀者回響 | 4.20</div>
-            <h2 class="slide-title">讀者信函摘錄：笑納人生的生命讚歌 ✉️</h2>
+            <h2 class="slide-title">讀者信函摘錄：笑納人生的生命讚歌 <span class="emoji-color">✉️</span></h2>
             <p class="slide-desc">在繁雜紅塵中，讀者寄給周易老師的隻字片語，構築了整座生命寶塔最動人、最熠熠生輝的真實見證：</p>
             <div class="highlight-quote">
               「讀完這本書，我哭了一整夜。那不是委屈的淚水，而是我那顆被利益、面子包裹了幾十年的自私靈魂，終於被聖賢的慈悲真誠所照亮，重獲新生的喜悅之淚。謝謝您，讓我學會了如何從容而行，笑納人生！」 —— 讀者林先生
@@ -3405,7 +3419,7 @@
           <div class="slide-right">
             <div class="value-balance-box">
               <div class="value-card objective" style="border-color: var(--primary);">
-                <h3>生命自覺的禮讚 💖</h3>
+                <h3>生命自覺的禮讚 <span class="emoji-color">💖</span></h3>
                 <p style="line-height:1.6; color:var(--text-main);">讀者的每一封來信，都是真理在人間流淌的活見證。這份感動與智慧，將伴隨著這份簡報，代代相傳，啟迪更多迷惘的心靈。</p>
               </div>
             </div>
@@ -3418,7 +3432,7 @@
         <div class="slide-card">
           <div class="cover-content">
             <div class="slide-category">⛵ 總結與傳承</div>
-            <h1 class="cover-title" style="font-size: 3.2rem; background: linear-gradient(135deg, #0f172a 0%, #0284c7 50%, #0d9488 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">生死兩安，從容而行 ⛵</h1>
+            <h1 class="cover-title" style="font-size: 3.2rem; background: linear-gradient(135deg, #0f172a 0%, #0284c7 50%, #0d9488 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">生死兩安，從容而行 <span class="emoji-color">⛵</span></h1>
             <p class="cover-subtitle" style="font-size: 1.4rem; margin-bottom: 2rem;">笑納人生，萬法皆安心</p>
             <p class="cover-desc" style="max-width: 780px; margin-bottom: 2.2rem; line-height: 1.6; color: var(--text-muted);">「夫子之道，忠恕而已矣。」從安心的體悟出發，透過立命自省、徹底從心上改過、廣行陰德陽善，並在生命的各個階段持守謙卑品格。當我們將這份「無私利他」的大安心貫通人生一切順逆境界時，生與死皆能安詳坦然。這便是儒釋道千百年來最平實、最慈悲的智慧結晶，引導我們在人間從容而行。祝福您，生命的寶塔巍然聳立，笑納人生，心安自在！</p>
             <span class="cover-author" style="background: rgba(14, 165, 233, 0.08); border-color: rgba(14, 165, 233, 0.18); color: var(--primary);">全書 70 節深度導覽演示完畢 感謝聆聽</span>
