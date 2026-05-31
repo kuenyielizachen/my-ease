@@ -941,6 +941,59 @@
       font-size: 0.92rem;
       line-height: 1.5;
     }
+
+    /* 3D Book Cover Aesthetics */
+    .cover-image-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      perspective: 1200px;
+    }
+
+    .book-3d {
+      width: 260px;
+      height: 370px;
+      position: relative;
+      transform: rotateY(-16deg) rotateX(8deg) rotateZ(-2deg);
+      transform-style: preserve-3d;
+      box-shadow: -15px 15px 30px rgba(15, 23, 42, 0.15), 
+                  -5px 5px 15px rgba(15, 23, 42, 0.1);
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), 
+                  box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      border-radius: 4px 14px 14px 4px;
+    }
+
+    .book-3d:hover {
+      transform: rotateY(-4deg) rotateX(4deg) rotateZ(0deg) scale(1.04);
+      box-shadow: -25px 25px 45px rgba(15, 23, 42, 0.22), 
+                  -10px 10px 20px rgba(15, 23, 42, 0.12);
+    }
+
+    .book-3d img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 4px 14px 14px 4px;
+      display: block;
+    }
+
+    /* Elegant Spine Shading */
+    .book-3d::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 12px;
+      height: 100%;
+      background: linear-gradient(to right, 
+                    rgba(15, 23, 42, 0.2) 0%, 
+                    rgba(255, 255, 255, 0.15) 30%, 
+                    rgba(15, 23, 42, 0.05) 100%);
+      border-radius: 4px 0 0 4px;
+      z-index: 5;
+    }
   </style>
 </head>
 <body>
@@ -974,14 +1027,23 @@
     <!-- Main Slide Show Space -->
     <div class="slides-wrapper" id="slidesWrapper">
 
-      <!-- Slide 1: Cover -->
+            <!-- Slide 1: Cover -->
       <div class="slide active" data-slide-index="1" data-part-group="part1">
-        <div class="slide-card">
-          <div class="cover-content">
-            <h1 class="cover-title">從容而行</h1>
-            <p class="cover-subtitle">笑納人生的智慧與心靈安頓</p>
-            <p class="cover-author">周易 講述 / 拙雲 劉尚寂 整理</p>
-            <p class="cover-desc">本簡報將全書共計 3 大單元細分為 70 張極緻細節投影片。透過精心設計的內容框架、經典引文與實證理路，帶領您完整領悟「儒、釋、道」融通一體的生命安頓之道。</p>
+        <div class="slide-card split">
+          <div class="slide-left" style="align-items: flex-start; text-align: left; padding-right: 0;">
+            <div class="cover-content" style="align-items: flex-start; text-align: left; max-width: 100%; margin: 0;">
+              <h1 class="cover-title" style="font-size: 3.8rem; text-align: left; margin-left: 0; background: linear-gradient(135deg, #0f172a 10%, #0284c7 50%, #0d9488 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">從容而行 ⛵</h1>
+              <p class="cover-subtitle" style="font-size: 1.5rem; text-align: left; margin-left: 0; margin-bottom: 1.5rem; letter-spacing: 2px;">笑納人生的智慧與心靈安頓</p>
+              <span class="cover-author" style="margin-left: 0; margin-bottom: 1.5rem;">周易 講述 / 拙雲 劉尚寂 整理</span>
+              <p class="cover-desc" style="text-align: left; max-width: 100%; margin-top: 0.5rem; font-size: 0.95rem; line-height: 1.6;">本簡報將全書共計 3 大單元細分為 70 張極緻細節投影片。透過精心設計的內容框架、經典引文與實證理路，帶領您完整領悟「儒、釋、道」融通一體的生命安頓之道。</p>
+            </div>
+          </div>
+          <div class="slide-right" style="display: flex; align-items: center; justify-content: center; height: 100%;">
+            <div class="cover-image-container">
+              <div class="book-3d">
+                <img src="book-cover.jpg" alt="從容而行 書籍封面">
+              </div>
+            </div>
           </div>
         </div>
       </div>
